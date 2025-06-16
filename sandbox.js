@@ -1874,7 +1874,6 @@ const data = [
       },
    },
 ];
-
 const fs = require("fs");
 const data2 = data[0].data.Products.map((item) => {
    return {
