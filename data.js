@@ -1,0 +1,1003 @@
+const products = [
+    {
+        name: 'MEXICO 66 SD',
+        slug: 'onitsuka-tiger-mexico-66-sd-multi-4906881',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 3300000,
+        tags: [ 'Wanita', 'Luxury', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/hkr6YzwSj5Hqg_GxmtYCt5-qyF0=/0x770/filters:quality(50):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4771-1886094-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/hkr6YzwSj5Hqg_GxmtYCt5-qyF0=/0x770/filters:quality(50):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4771-1886094-1.jpg',     
+          'https://dynamic.zacdn.com/Fu3AcrTRNoujFQpJHYpFqB5GNFA=/0x770/filters:quality(50):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4771-1886094-2.jpg',     
+          'https://dynamic.zacdn.com/gqXjaNADX-wfW0STiDWsu1FR5OE=/0x770/filters:quality(50):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4771-1886094-3.jpg',     
+          'https://dynamic.zacdn.com/6dYjn1bSbV6C4KZtuHTk0AcFJbQ=/0x770/filters:quality(50):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4772-1886094-4.jpg',     
+          'https://dynamic.zacdn.com/-9OBvXn9Eud_9xmUoPFoAhxqlpU=/0x770/filters:quality(50):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4772-1886094-5.jpg',     
+          'https://dynamic.zacdn.com/fR54uZ_xarGs03NgoekjAYt5DCU=/0x770/filters:quality(50):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4772-1886094-6.jpg',     
+          'https://dynamic.zacdn.com/YDS17jXoryBANKbTLCvlBTdNhgw=/0x770/filters:quality(50):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4772-1886094-7.jpg',     
+          'https://dynamic.zacdn.com/k5I2XZgr3MGiAv9dsTFMOjim3U0=/0x770/filters:quality(50):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4773-1886094-8.jpg'      
+        ],
+        createdAt: 2025-06-16T09:55:03.102Z,
+        updatedAt: 2025-06-16T09:55:03.102Z
+      },
+      {
+        name: 'MEXICO 66 PARATY',
+        slug: 'onitsuka-tiger-mexico-66-paraty-blue-4906869',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 2000000,
+        tags: [ 'Pria', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/xQ2heAJ3t4DRW3Y5fSJuPdW5rbI=/0x770/filters:quality(50):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1439-9686094-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/xQ2heAJ3t4DRW3Y5fSJuPdW5rbI=/0x770/filters:quality(50):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1439-9686094-1.jpg',     
+          'https://dynamic.zacdn.com/FvcjXLEIKtiHV3GjVR6Mmf53MYI=/0x770/filters:quality(50):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1440-9686094-2.jpg',     
+          'https://dynamic.zacdn.com/wh4PhU3UnEoK6prifJ9q6qUSAZI=/0x770/filters:quality(50):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1440-9686094-3.jpg',     
+          'https://dynamic.zacdn.com/kXkWb936DzEkl_nJ0rwebsCQ1Ss=/0x770/filters:quality(50):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1440-9686094-4.jpg',     
+          'https://dynamic.zacdn.com/qBLUYcc0SzBwBwSDUxUY2PztAXQ=/0x770/filters:quality(50):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1440-9686094-5.jpg',     
+          'https://dynamic.zacdn.com/j71sZQy7fQEWOwjyidz_Uo0JIf4=/0x770/filters:quality(50):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1440-9686094-6.jpg',     
+          'https://dynamic.zacdn.com/vjWhPTaOFZ8JOyiuJxk0r9_bp3o=/0x770/filters:quality(50):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1441-9686094-7.jpg',     
+          'https://dynamic.zacdn.com/QDPdW64YkTM2qacOrjlmtnlW3XI=/0x770/filters:quality(50):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1441-9686094-8.jpg'      
+        ],
+        createdAt: 2025-06-16T09:55:03.102Z,
+        updatedAt: 2025-06-16T09:55:03.102Z
+      },
+      {
+        name: 'CALIFORNIA 78 EX',
+        slug: 'onitsuka-tiger-california-78-ex-multi-4914037',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 2600000,
+        tags: [ 'Wanita', 'Luxury', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/jGq9iOeXMczDBUV68Lv_ElL3jaM=/0x770/filters:quality(50):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5945-7304194-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/jGq9iOeXMczDBUV68Lv_ElL3jaM=/0x770/filters:quality(50):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5945-7304194-1.jpg',     
+          'https://dynamic.zacdn.com/fqjhf27Yo8QX9zglT1MKomgUJXg=/0x770/filters:quality(50):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5945-7304194-2.jpg',     
+          'https://dynamic.zacdn.com/BM0vsGPMt3mLWpyrRtt3tjAbQ_E=/0x770/filters:quality(50):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5945-7304194-3.jpg',     
+          'https://dynamic.zacdn.com/MnZkiOFDf6Nn2qGkfTYwU7YT9pA=/0x770/filters:quality(50):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5945-7304194-4.jpg',     
+          'https://dynamic.zacdn.com/tvmTuLHUwgnwcioYNec78Duv4Uc=/0x770/filters:quality(50):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5946-7304194-5.jpg',     
+          'https://dynamic.zacdn.com/gUJR3j814-Fy5H9a9zuWsNKkR7o=/0x770/filters:quality(50):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5946-7304194-6.jpg',     
+          'https://dynamic.zacdn.com/vYrxFNRqfA3yiGNlKgOWlZp-fyY=/0x770/filters:quality(50):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5946-7304194-7.jpg',     
+          'https://dynamic.zacdn.com/6gccLFHo9rWotMY0YUDhsZIKbMQ=/0x770/filters:quality(50):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5946-7304194-8.jpg'      
+        ],
+        createdAt: 2025-06-16T09:55:03.102Z,
+        updatedAt: 2025-06-16T09:55:03.102Z
+      }
+    ]
+    
+    abdul@Abdullah MINGW64 ~/Desktop/phase3/gc02-abdullahassegaf (abdul)
+    $ node sandbox
+    [
+      {
+        name: 'Samba Og Shoes',
+        slug: 'adidas-samba-og-shoes-black-4404153',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 2000000,
+        tags: [ 'Sports', 'Sports Pria', 'Sepatu' ],
+        thumbnail: 'https://dynamic.zacdn.com/PSgJmzlxL6ugOkmv_yN_c_FQYPA=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-8478-3514044-1.jpg',    
+        images: [
+          'https://dynamic.zacdn.com/PSgJmzlxL6ugOkmv_yN_c_FQYPA=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-8478-3514044-1.jpg',
+          'https://dynamic.zacdn.com/UmGWJ25JfXDt-0-FIfLxQd7J4LI=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-8478-3514044-2.jpg',
+          'https://dynamic.zacdn.com/M01muzqMc30ySoZDl3pPfM-hJjQ=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-8478-3514044-3.jpg',
+          'https://dynamic.zacdn.com/-scnvtCG3HwWAINEru5RVJwfZ5Q=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-8479-3514044-4.jpg',
+          'https://dynamic.zacdn.com/_KAC2yka_KBU-R8xFHVQXBuP4NA=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-8479-3514044-5.jpg',
+          'https://dynamic.zacdn.com/nZcYBrMLI4q0EL1xA2U0AXcR2A0=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-8480-3514044-6.jpg',
+          'https://dynamic.zacdn.com/pkP4zTz55_DVS77oVrm62E2NATg=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-8480-3514044-7.jpg',
+          'https://dynamic.zacdn.com/mir0VjKkw_khn123t6Dcr-f7M5c=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-8480-3514044-8.jpg'
+        ],
+        createdAt: 2025-06-16T09:56:02.761Z,
+        updatedAt: 2025-06-16T09:56:02.761Z
+      },
+      {
+        name: 'Samba OG Shoes',
+        slug: 'adidas-samba-og-shoes-white-4793855',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 2000000,
+        tags: [ 'Sports', 'Sports Pria', 'Sepatu' ],
+        thumbnail: 'https://dynamic.zacdn.com/GIf2vo1lLmYiZw37FMYceX14pSs=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-4046-5583974-1.jpg',    
+        images: [
+          'https://dynamic.zacdn.com/GIf2vo1lLmYiZw37FMYceX14pSs=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-4046-5583974-1.jpg',
+          'https://dynamic.zacdn.com/ehM2ECcp9KEpDi6YUqRK01GBnBo=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-4046-5583974-2.jpg',
+          'https://dynamic.zacdn.com/wy7-gzDwcS-No2Y4Mxr1ql5LuRA=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-4047-5583974-3.jpg',
+          'https://dynamic.zacdn.com/7UGSvIP3WMHPw6f-XUApUs6Jdho=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-4047-5583974-4.jpg',
+          'https://dynamic.zacdn.com/rls5S5MHXrU0HQRhUg72hX3y0FY=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-4047-5583974-5.jpg',
+          'https://dynamic.zacdn.com/t16SxonKELC-Un5uSjQs8h7oOck=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-4048-5583974-6.jpg',
+          'https://dynamic.zacdn.com/nZHC07_wsVuBsvbusR6OI4F5cYw=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-4048-5583974-7.jpg',
+          'https://dynamic.zacdn.com/FXI0b5d30shkA5eUwUryPhvlsPk=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-4048-5583974-8.jpg'
+        ],
+        createdAt: 2025-06-16T09:56:02.761Z,
+        updatedAt: 2025-06-16T09:56:02.761Z
+      },
+      {
+        name: 'Samba Og Sneakers',
+        slug: 'adidas-samba-og-sneakers-black-2402227',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 2200000,
+        tags: [ 'Sports', 'Sports Pria', 'Sepatu' ],
+        thumbnail: 'https://dynamic.zacdn.com/U5CS2I08M2S-YytRA-xl43UGdgs=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-2907-7222042-1.jpg',    
+        images: [
+          'https://dynamic.zacdn.com/U5CS2I08M2S-YytRA-xl43UGdgs=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-2907-7222042-1.jpg',
+          'https://dynamic.zacdn.com/XJDvrbZH8xix_AsYVvB3OJtlgUM=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-2907-7222042-2.jpg',
+          'https://dynamic.zacdn.com/2SOYezbLHuq-PLy0blC2sp9bHOI=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-2907-7222042-3.jpg',
+          'https://dynamic.zacdn.com/KeloCd4mAIe6MoTbc9gbIbqAjw8=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-2907-7222042-4.jpg',
+          'https://dynamic.zacdn.com/V-I63CnRs2BT0jk4Pn3S_Tie1Io=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-2907-7222042-5.jpg',
+          'https://dynamic.zacdn.com/wm0c-Wa1-SNMiVDSFDRfjwPO2AQ=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-2907-7222042-6.jpg',
+          'https://dynamic.zacdn.com/2DpvqOU0HtGFp5o2DvGuqSAadjo=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-2908-7222042-7.jpg'
+        ],
+        createdAt: 2025-06-16T09:56:02.761Z,
+        updatedAt: 2025-06-16T09:56:02.761Z
+      },
+      {
+        name: 'Samba OG Shoes',
+        slug: 'adidas-samba-og-shoes-grey-4900623',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 2000000,
+        tags: [ 'Sports', 'Pria', 'Sepatu' ],
+        thumbnail: 'https://dynamic.zacdn.com/_zfXGQEpndPKGuTH3i4eyxbdW5c=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-7343-3260094-1.jpg',    
+        images: [
+          'https://dynamic.zacdn.com/_zfXGQEpndPKGuTH3i4eyxbdW5c=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-7343-3260094-1.jpg',
+          'https://dynamic.zacdn.com/gXQ5Ss5t4fhe7RkBl4bDLfrSvVU=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-7343-3260094-2.jpg',
+          'https://dynamic.zacdn.com/VUmHuUzA-i6-4OQNnJPfjt0m2CE=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-7343-3260094-3.jpg',
+          'https://dynamic.zacdn.com/IQw85E1_0FAQJaBR350XK1Jo5-Q=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-7344-3260094-4.jpg',
+          'https://dynamic.zacdn.com/cdkc793gcONzCCtLi-u8qdgHj5c=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-7344-3260094-5.jpg',
+          'https://dynamic.zacdn.com/8IpCYUJITkZiGfwPSY6bjE8kNOs=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-7344-3260094-6.jpg',
+          'https://dynamic.zacdn.com/XrKOhDmm_vP9DrbdQO2WvtNwvfY=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-7345-3260094-7.jpg'
+        ],
+        createdAt: 2025-06-16T09:56:02.761Z,
+        updatedAt: 2025-06-16T09:56:02.761Z
+      },
+      {
+        name: 'Air Max 90 Shoes',
+        slug: 'nike-air-max-90-shoes-black-4905018',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 2489000,
+        tags: [ 'Sports', 'Pria', 'Sepatu' ],
+        thumbnail: 'https://dynamic.zacdn.com/Hgz0Q8fLR4aaN-DIy4n_pUV2j8c=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/nike-0965-8105094-1.jpg',      
+        images: [
+          'https://dynamic.zacdn.com/Hgz0Q8fLR4aaN-DIy4n_pUV2j8c=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/nike-0965-8105094-1.jpg',
+          'https://dynamic.zacdn.com/W5f5T52FB75RQEEeiXUR9Wbx5J8=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/nike-0965-8105094-2.jpg',
+          'https://dynamic.zacdn.com/jOn2pPLWMM7ZWdBheqt875MKQiU=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/nike-0965-8105094-3.jpg',
+          'https://dynamic.zacdn.com/UClQ_ZpUii1DJqaLfYhgSvON4UU=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/nike-0966-8105094-4.jpg',
+          'https://dynamic.zacdn.com/8MiABC0TfgsugZff1NIBzUzEphQ=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/nike-0966-8105094-5.jpg',
+          'https://dynamic.zacdn.com/VcTIQpIC0I5CNyRCs_UN6s7mjI8=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/nike-0966-8105094-6.jpg',
+          'https://dynamic.zacdn.com/4WSB9VCziGHPdtnUISriBTmFex0=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/nike-0966-8105094-7.jpg',
+          'https://dynamic.zacdn.com/hwe7Yqze0w3CoRZDw0zKf1C1Z9A=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/nike-0966-8105094-8.jpg'
+        ],
+        createdAt: 2025-06-16T09:56:02.761Z,
+        updatedAt: 2025-06-16T09:56:02.761Z
+      },
+      {
+        name: 'Samba Og',
+        slug: 'adidas-samba-og-white-2324379',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 2200000,
+        tags: [ 'Sports', 'Sports Pria', 'Sepatu' ],
+        thumbnail: 'https://dynamic.zacdn.com/a_mel87PTKfVN2-BPzpAEKWLhRA=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-2907-9734232-1.jpg',    
+        images: [
+          'https://dynamic.zacdn.com/a_mel87PTKfVN2-BPzpAEKWLhRA=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-2907-9734232-1.jpg',
+          'https://dynamic.zacdn.com/ERAnjz7Vl5VrV4rJJ00CMFaALTM=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-2907-9734232-2.jpg',
+          'https://dynamic.zacdn.com/oLWLL5pBCgICnsXBg6yu30WWtrw=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-2907-9734232-3.jpg',
+          'https://dynamic.zacdn.com/EQAj_U1rbdoPPDYB7ppvZPa4Gac=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-2907-9734232-4.jpg',
+          'https://dynamic.zacdn.com/BZ_gF2RJSO2RR53Jxun0oXlVLhg=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-2907-9734232-5.jpg',
+          'https://dynamic.zacdn.com/e4nNnK2uG5zsVY4831Djj7Gi-ks=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-2907-9734232-6.jpg',
+          'https://dynamic.zacdn.com/d-6qORPYGBZfmqrRGYfLVCDv89k=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-2908-9734232-7.jpg',
+          'https://dynamic.zacdn.com/YUiJPmVSISk-zJMi5rJ4geGE7EY=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-2908-9734232-8.jpg'
+        ],
+        createdAt: 2025-06-16T09:56:02.761Z,
+        updatedAt: 2025-06-16T09:56:02.761Z
+      },
+      {
+        name: 'Nike Zoom Vomero 5',
+        slug: 'nike-nike-zoom-vomero-5-black-4899955',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 2489000,
+        tags: [ 'Sports', 'Sports Pria', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/pxdKFdA5Hb6INoeW-py8vF5y-rE=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/nike-6944-5599984-1.jpg',      
+        images: [
+          'https://dynamic.zacdn.com/pxdKFdA5Hb6INoeW-py8vF5y-rE=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/nike-6944-5599984-1.jpg',
+          'https://dynamic.zacdn.com/lEI2MgPEBmhcc_jeUF6IvMHzMxc=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/nike-6945-5599984-2.jpg',
+          'https://dynamic.zacdn.com/KZX9BR3e9myCaAyl6ebqzGJ9MN0=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/nike-6945-5599984-3.jpg',
+          'https://dynamic.zacdn.com/5Ub4B1qo2oVRT5bvmvaOexolt3E=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/nike-6946-5599984-4.jpg',
+          'https://dynamic.zacdn.com/1aeTjBQ4x2FA-UWnij8scxMgCK8=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/nike-6947-5599984-5.jpg',
+          'https://dynamic.zacdn.com/i8Laj27t27SzZ_Rt1phg2-eUH1Y=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/nike-6947-5599984-6.jpg',
+          'https://dynamic.zacdn.com/WUkt_AUeyvwsuL06W7sNrZLKbgk=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/nike-6948-5599984-7.jpg',
+          'https://dynamic.zacdn.com/pXMhwC-puUAD9uc5i_gtFDbhWYA=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/nike-6949-5599984-8.jpg'
+        ],
+        createdAt: 2025-06-16T09:56:02.761Z,
+        updatedAt: 2025-06-16T09:56:02.761Z
+      },
+      {
+        name: "Men's Ag-Lt23 Ultra Tennis Shoes - Blue",
+        slug: 'lacoste-men-s-ag-lt23-ultra-tennis-shoes-blue-blue-4817506',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 3099000,
+        tags: [ 'Pria', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/OYe1Xy2htx-nHW7m-SSTQ2OjiLI=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/lacoste-7386-6057184-1.jpg',   
+        images: [
+          'https://dynamic.zacdn.com/OYe1Xy2htx-nHW7m-SSTQ2OjiLI=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/lacoste-7386-6057184-1.jpg',
+          'https://dynamic.zacdn.com/aXYJMbkdP51HvUaSajvpv9Kqj9E=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/lacoste-7386-6057184-2.jpg',
+          'https://dynamic.zacdn.com/BCOcONO5d4_AoiB9vmK7-F9PjLk=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/lacoste-7386-6057184-3.jpg',
+          'https://dynamic.zacdn.com/aTQeFiVUEsQJZg3GR6W8dTBv64M=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/lacoste-7386-6057184-4.jpg'
+        ],
+        createdAt: 2025-06-16T09:56:02.761Z,
+        updatedAt: 2025-06-16T09:56:02.761Z
+      },
+      {
+        name: 'Samba OG Shoes',
+        slug: 'adidas-samba-og-shoes-white-4794189',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 2000000,
+        tags: [ 'Sports', 'Sports Pria', 'Sepatu' ],
+        thumbnail: 'https://dynamic.zacdn.com/UGsWZ1--FKV9huOxDOeGh0kvzfg=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-6715-9814974-1.jpg',    
+        images: [
+          'https://dynamic.zacdn.com/UGsWZ1--FKV9huOxDOeGh0kvzfg=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-6715-9814974-1.jpg',
+          'https://dynamic.zacdn.com/271agV9eNWLETpNT9RC-uvehoIM=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-6716-9814974-2.jpg',
+          'https://dynamic.zacdn.com/FG-G04LMRzLUhjD8lXzn8Kh4VSY=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-6716-9814974-3.jpg',
+          'https://dynamic.zacdn.com/w28joaTP69jWkpI9qt1-Ik9km2U=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-6717-9814974-4.jpg',
+          'https://dynamic.zacdn.com/nvii7FYMUvpB43YenPyfzI9dNeM=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-6717-9814974-5.jpg',
+          'https://dynamic.zacdn.com/twMezV1mbE2msj96UC2wfgBbrl0=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-6718-9814974-6.jpg',
+          'https://dynamic.zacdn.com/qUozrDwgwEja2pLXaR3w92PjPWA=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-6718-9814974-7.jpg',
+          'https://dynamic.zacdn.com/bSTZLuDhM4XJZLjNCA49VVo6lzk=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-6719-9814974-8.jpg'
+        ],
+        createdAt: 2025-06-16T09:56:02.761Z,
+        updatedAt: 2025-06-16T09:56:02.761Z
+      },
+      {
+        name: 'MEXICO 66',
+        slug: 'onitsuka-tiger-mexico-66-black-4906859',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 2600000,
+        tags: [ 'Pria', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/yfvr_yNTODlbiIDqakNVNv7ZXhA=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1431-9586094-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/yfvr_yNTODlbiIDqakNVNv7ZXhA=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1431-9586094-1.jpg',     
+          'https://dynamic.zacdn.com/pxvw1o9PkhE37topPsTNm20mrdo=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1431-9586094-2.jpg',     
+          'https://dynamic.zacdn.com/7I_86yHUUErRmjStlmfkQd4B9c8=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1431-9586094-3.jpg',     
+          'https://dynamic.zacdn.com/kraVHL4wX0q7sKwJOBljHLOL4_M=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1432-9586094-4.jpg',     
+          'https://dynamic.zacdn.com/LbMHVrTyrPiXojkJmuG9B4cOcB4=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1432-9586094-5.jpg',     
+          'https://dynamic.zacdn.com/9Y9_WWLs1J_YKte2Wed0BecIJQc=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1432-9586094-6.jpg',     
+          'https://dynamic.zacdn.com/YgnzC0AHqDJriS7hJ1zOQ6oUiUo=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1432-9586094-7.jpg',     
+          'https://dynamic.zacdn.com/rkJkbrm09WqeFAXrNxrq25faI8U=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1432-9586094-8.jpg'      
+        ],
+        createdAt: 2025-06-16T09:56:02.762Z,
+        updatedAt: 2025-06-16T09:56:02.762Z
+      },
+      {
+        name: 'TOKUTEN',
+        slug: 'onitsuka-tiger-tokuten-white-4906783',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 2800000,
+        tags: [ 'Wanita', 'Luxury', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/caxesnsPanCpG41KB84pqbpNYMw=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5190-3876094-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/caxesnsPanCpG41KB84pqbpNYMw=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5190-3876094-1.jpg',     
+          'https://dynamic.zacdn.com/rRWW0GBLtCEZeurDlOuXJzb6DjI=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5190-3876094-2.jpg',     
+          'https://dynamic.zacdn.com/3qADtKus32ScbBEMz0oGUWFYQQE=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5190-3876094-3.jpg',     
+          'https://dynamic.zacdn.com/IHW2S316q4AhRhxEpLKW87MxdJU=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5190-3876094-4.jpg',     
+          'https://dynamic.zacdn.com/neqa6diYr2Llr9pxz1M_cpwsQL4=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5191-3876094-5.jpg',     
+          'https://dynamic.zacdn.com/xTJWdu4YdFaPYt3zf9xRGVOzcns=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5191-3876094-6.jpg',     
+          'https://dynamic.zacdn.com/NTjl7ayfE6rH7w9ulhzxv7q1LjY=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5191-3876094-7.jpg',     
+          'https://dynamic.zacdn.com/M87KJMWG45QIZX1iNwO5gAoFfUQ=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5191-3876094-8.jpg'      
+        ],
+        createdAt: 2025-06-16T09:56:02.762Z,
+        updatedAt: 2025-06-16T09:56:02.762Z
+      },
+      {
+        name: 'TOKUTEN',
+        slug: 'onitsuka-tiger-tokuten-grey-4906806',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 2500000,
+        tags: [ 'Wanita', 'Luxury', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/Upp3MvZf6zlQo4hSaU7t67oD7jY=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4914-6086094-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/Upp3MvZf6zlQo4hSaU7t67oD7jY=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4914-6086094-1.jpg',     
+          'https://dynamic.zacdn.com/f3igeNJ_pGS5g0fn77MOo28VZWU=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4914-6086094-2.jpg',     
+          'https://dynamic.zacdn.com/Ks-ao8BwFeCQHrsxptjZvaGPYNs=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4915-6086094-3.jpg',     
+          'https://dynamic.zacdn.com/SIb81TeaGtfZ-RsMxMbD1bZ28B4=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4915-6086094-4.jpg',     
+          'https://dynamic.zacdn.com/ykquv01gc3XlLOmJvnSTdIIxFfs=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4915-6086094-5.jpg',     
+          'https://dynamic.zacdn.com/GVyomTT7CyMCqFjDdtIQjuP4l3U=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4915-6086094-6.jpg',     
+          'https://dynamic.zacdn.com/x0nwj--5ZFXwssJ71eQ1wKb6c8Y=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4915-6086094-7.jpg',     
+          'https://dynamic.zacdn.com/e_Zp9pVhtm-28l-PsCR16XpuDco=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4916-6086094-8.jpg'      
+        ],
+        createdAt: 2025-06-16T09:56:02.762Z,
+        updatedAt: 2025-06-16T09:56:02.762Z
+      },
+      {
+        name: 'MEXICO 66 SLIP-ON',
+        slug: 'onitsuka-tiger-mexico-66-slip-on-multi-4906888',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 2000000,
+        tags: [ 'Wanita', 'Luxury', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/37p3L_vbOgplLLX4Gp69RxN96Kw=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4795-8886094-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/37p3L_vbOgplLLX4Gp69RxN96Kw=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4795-8886094-1.jpg',     
+          'https://dynamic.zacdn.com/Vml8f5vY_3kBtyflDsy62gZGxj8=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4796-8886094-2.jpg',     
+          'https://dynamic.zacdn.com/sNo1x5Z3lnQF6cmyIMIJEIOgwj0=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4796-8886094-3.jpg',     
+          'https://dynamic.zacdn.com/Q0CktR08FzF53bkRNyOkDocDOM8=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4796-8886094-4.jpg',     
+          'https://dynamic.zacdn.com/VhBYAWlyiHaQ4lQwkgfdaMUtBiE=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4796-8886094-5.jpg',     
+          'https://dynamic.zacdn.com/AePd7X0_i4AGO3zaHsEK0YYG2Js=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4797-8886094-6.jpg',     
+          'https://dynamic.zacdn.com/u-LgRw8ogeOdaRgEST9UgCPJ9Xo=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4797-8886094-7.jpg',     
+          'https://dynamic.zacdn.com/WZOtSFbOd_QTMcD19nqjx7Ucn5k=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4797-8886094-8.jpg'      
+        ],
+        createdAt: 2025-06-16T09:56:02.762Z,
+        updatedAt: 2025-06-16T09:56:02.762Z
+      },
+      {
+        name: 'TOKUTEN',
+        slug: 'onitsuka-tiger-tokuten-bronze-4906802',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 2500000,
+        tags: [ 'Wanita', 'Luxury', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/WcMNb5CdhCNlJ59UwEZM20-QQ24=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5222-2086094-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/WcMNb5CdhCNlJ59UwEZM20-QQ24=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5222-2086094-1.jpg',     
+          'https://dynamic.zacdn.com/F_HwulE4AUWh5bc1dIKea5myTv0=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5223-2086094-2.jpg',     
+          'https://dynamic.zacdn.com/jzHQ7jpOTtyt_0geiEd2ODlXqhU=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5223-2086094-3.jpg',     
+          'https://dynamic.zacdn.com/y2AIrEJDIDil8_C9Ak8A6JjUzoo=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5223-2086094-4.jpg',     
+          'https://dynamic.zacdn.com/U-SGvVI_XFy9nBSWMellen7fWjk=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5223-2086094-5.jpg',     
+          'https://dynamic.zacdn.com/kdUbolYoUm4oFfyjhtV60_yv-QM=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5224-2086094-6.jpg',     
+          'https://dynamic.zacdn.com/gyNP7FXHoUywvLWH6kmHm8aElVw=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5224-2086094-7.jpg',     
+          'https://dynamic.zacdn.com/hvHaM3_7IV5h97WMki3bhPitHo8=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5224-2086094-8.jpg'      
+        ],
+        createdAt: 2025-06-16T09:56:02.762Z,
+        updatedAt: 2025-06-16T09:56:02.762Z
+      },
+      {
+        name: 'TOKUTEN',
+        slug: 'onitsuka-tiger-tokuten-white-4906759',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 2800000,
+        tags: [ 'Wanita', 'Luxury', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/Lc0_qsOGxtqVnmqIcShs0gx85gk=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4939-9576094-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/Lc0_qsOGxtqVnmqIcShs0gx85gk=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4939-9576094-1.jpg',     
+          'https://dynamic.zacdn.com/VFM-Uio21R_XTAExBLAtI_SKadw=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4939-9576094-2.jpg',     
+          'https://dynamic.zacdn.com/nlDnN9ADlvgWvmwQl1NQooNCoLo=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4939-9576094-3.jpg',     
+          'https://dynamic.zacdn.com/yLRG-gRfyu-xLsV1GFsobUk1exY=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4939-9576094-4.jpg',     
+          'https://dynamic.zacdn.com/YErTv6C5sy2RI4_OPXC6T6I2EMM=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4940-9576094-5.jpg',     
+          'https://dynamic.zacdn.com/ebLWetDDRVQ7vJN6rQADWgC96u8=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4940-9576094-6.jpg',     
+          'https://dynamic.zacdn.com/aU0GKK38Pua-1NRpeTs7IALArsQ=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4940-9576094-7.jpg',     
+          'https://dynamic.zacdn.com/Eh7ix90X1I5DnI9emIGftg9Y8_s=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4940-9576094-8.jpg'      
+        ],
+        createdAt: 2025-06-16T09:56:02.762Z,
+        updatedAt: 2025-06-16T09:56:02.762Z
+      },
+      {
+        name: 'DELECITY',
+        slug: 'onitsuka-tiger-delecity-white-4906839',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 3700000,
+        tags: [ 'Wanita', 'Luxury', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/Ee1iH8fsH_GVcjhjUAl4SAyP8sI=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5056-9386094-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/Ee1iH8fsH_GVcjhjUAl4SAyP8sI=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5056-9386094-1.jpg',     
+          'https://dynamic.zacdn.com/TeayyPK4KQBu10HxjURfwANCA-Y=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5056-9386094-2.jpg',     
+          'https://dynamic.zacdn.com/0ZH9gQ3uxbPyyvrbvxou62VhHOE=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5056-9386094-3.jpg',     
+          'https://dynamic.zacdn.com/8-j1P9rfP938WdCZKh57elVj93Q=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5056-9386094-4.jpg',     
+          'https://dynamic.zacdn.com/6GV9RtA2opPnF5Mpblwe0Uzl3O4=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5057-9386094-5.jpg',     
+          'https://dynamic.zacdn.com/q7m4SrjnLaz788XOhjo6b1XGNTU=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5057-9386094-6.jpg',     
+          'https://dynamic.zacdn.com/RN17elp0Domsph4bVfbcLsheqpo=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5057-9386094-7.jpg',     
+          'https://dynamic.zacdn.com/t6xuixwlXXNaFwfBWPs6EHeF2Og=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5057-9386094-8.jpg'      
+        ],
+        createdAt: 2025-06-16T09:56:02.762Z,
+        updatedAt: 2025-06-16T09:56:02.762Z
+      },
+      {
+        name: 'Samba OG Shoes',
+        slug: 'adidas-samba-og-shoes-white-4794163',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 2000000,
+        tags: [ 'Sports', 'Sports Pria', 'Sepatu' ],
+        thumbnail: 'https://dynamic.zacdn.com/PS8xwDZhG0LUabCI0KdsvrpKx3Y=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-9252-3614974-1.jpg',    
+        images: [
+          'https://dynamic.zacdn.com/PS8xwDZhG0LUabCI0KdsvrpKx3Y=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-9252-3614974-1.jpg',
+          'https://dynamic.zacdn.com/dFL2-g-nmeY9I4jnE9hMKJ-aJ6o=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-9252-3614974-2.jpg',
+          'https://dynamic.zacdn.com/p5aQLkbT55e_aSFkrBgXlsoLAXo=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-9253-3614974-3.jpg',
+          'https://dynamic.zacdn.com/pU43C4dd0GpKqw84Qt2hwCR9mSw=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-9253-3614974-4.jpg',
+          'https://dynamic.zacdn.com/Vl-Mw9Yb-vF-fUnUBkyXPphPkwM=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-9253-3614974-5.jpg',
+          'https://dynamic.zacdn.com/dISO4zbgkWUTQ_MezUGOLZv8WdM=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-9254-3614974-6.jpg',
+          'https://dynamic.zacdn.com/yFysnt81Oua0bBVKZhKX3xmkaJY=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-9254-3614974-7.jpg',
+          'https://dynamic.zacdn.com/XqAJIQUyV0c2ELGZ22KDPQ22-yU=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/adidas-9255-3614974-8.jpg'
+        ],
+        createdAt: 2025-06-16T09:56:02.762Z,
+        updatedAt: 2025-06-16T09:56:02.762Z
+      },
+      {
+        name: 'DELEGATION EX',
+        slug: 'onitsuka-tiger-delegation-ex-multi-4906886',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 3000000,
+        tags: [ 'Wanita', 'Luxury', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/wXG0qp7_daES4obDb7yeksj8phs=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4862-6886094-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/wXG0qp7_daES4obDb7yeksj8phs=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4862-6886094-1.jpg',     
+          'https://dynamic.zacdn.com/PrfhZ2Uc53YyVzq7EZiLOQjdvsY=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4862-6886094-2.jpg',     
+          'https://dynamic.zacdn.com/k816A65qPyayJ3Zu1eo3gqeP5Ig=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4862-6886094-3.jpg',     
+          'https://dynamic.zacdn.com/4X0Ddw4VmduNb2UYZ8V3N19zBWA=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4862-6886094-4.jpg',     
+          'https://dynamic.zacdn.com/2tmxREPHWucYmWOVVwtD2wlhAew=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4863-6886094-5.jpg',     
+          'https://dynamic.zacdn.com/WKHOCpB4EKNCc-1tC5UGGGn9FMs=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4863-6886094-6.jpg',     
+          'https://dynamic.zacdn.com/GCm3kgrKqSOI4a7BgvLQ3qxNRrY=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4863-6886094-7.jpg',     
+          'https://dynamic.zacdn.com/O-WZ7DMIFfxneBPp8YT9hNW_5GY=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4863-6886094-8.jpg'      
+        ],
+        createdAt: 2025-06-16T09:56:02.762Z,
+        updatedAt: 2025-06-16T09:56:02.762Z
+      },
+      {
+        name: 'CALIFORNIA 78 EX',
+        slug: 'onitsuka-tiger-california-78-ex-multi-4914039',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 2600000,
+        tags: [ 'Wanita', 'Luxury', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/TmdkqjHDKTfWTUCiu5aL0ikxiGc=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5950-9304194-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/TmdkqjHDKTfWTUCiu5aL0ikxiGc=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5950-9304194-1.jpg',     
+          'https://dynamic.zacdn.com/rJvPKphUl644KTIQNYz66LO08P4=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5950-9304194-2.jpg',     
+          'https://dynamic.zacdn.com/n2gb1mPWzF0EsVmRP0HwlIM-Wjs=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5951-9304194-3.jpg',     
+          'https://dynamic.zacdn.com/kG0yxRRQkPRYKwnEv1xD4_DgS08=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5951-9304194-4.jpg',     
+          'https://dynamic.zacdn.com/NhgzIZpYSvKCa7rncF0ub5hO8lE=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5951-9304194-5.jpg',     
+          'https://dynamic.zacdn.com/AjoFwoFuLXkglZSecDkqpGTF37A=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5951-9304194-6.jpg'      
+        ],
+        createdAt: 2025-06-16T09:56:02.762Z,
+        updatedAt: 2025-06-16T09:56:02.762Z
+      },
+      {
+        name: 'MEXICO 66',
+        slug: 'onitsuka-tiger-mexico-66-beige-4906861',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 2600000,
+        tags: [ 'Pria', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/RIPPKgaN7q9ry803m7QAmGUV4p8=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1437-1686094-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/RIPPKgaN7q9ry803m7QAmGUV4p8=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1437-1686094-1.jpg',     
+          'https://dynamic.zacdn.com/HdGS9MNj-_TcEfd_ckP5JcwvVi8=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1438-1686094-2.jpg',     
+          'https://dynamic.zacdn.com/qywhLRsnvvDR69ssLyd4MMIEuS8=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1438-1686094-3.jpg',     
+          'https://dynamic.zacdn.com/fZ2d-2i5k_jnpURWCRwEYWb_dVk=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1438-1686094-4.jpg',     
+          'https://dynamic.zacdn.com/FZPJ0kQC8bMTb2eJYYgEwRAu95I=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1438-1686094-5.jpg',     
+          'https://dynamic.zacdn.com/qBNCu-07XBEqiyGwxkrbvXRIhvQ=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1438-1686094-6.jpg',     
+          'https://dynamic.zacdn.com/mbtS2qpZPErUi6u_xI1L0G8gglA=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1438-1686094-7.jpg',     
+          'https://dynamic.zacdn.com/kCagowxcVYqd4qYLznn5Vn1_mrg=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1439-1686094-8.jpg'      
+        ],
+        createdAt: 2025-06-16T09:56:02.762Z,
+        updatedAt: 2025-06-16T09:56:02.762Z
+      },
+      {
+        name: 'MEXICO 66 SD',
+        slug: 'onitsuka-tiger-mexico-66-sd-black-4906717',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 3500000,
+        tags: [ 'Wanita', 'Luxury', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/Y4YEbmS-1GBCpgcsMSI9I1iZY58=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4777-7176094-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/Y4YEbmS-1GBCpgcsMSI9I1iZY58=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4777-7176094-1.jpg',     
+          'https://dynamic.zacdn.com/8ZkU2AbHRQhB3SXF3tQckgr4UDk=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4777-7176094-2.jpg',     
+          'https://dynamic.zacdn.com/OpfRfjkqBSUGebEEerPpfpJX2jQ=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4777-7176094-3.jpg',     
+          'https://dynamic.zacdn.com/BTYpaLT-dlL5dwt3RSNJsbDBPKQ=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4777-7176094-4.jpg',     
+          'https://dynamic.zacdn.com/PmnoxrMQtvdxKuxKGVD-qArxIzI=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4777-7176094-5.jpg',     
+          'https://dynamic.zacdn.com/z6rntpmud6Yij5Q1KcjxrJZURNQ=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4778-7176094-6.jpg',     
+          'https://dynamic.zacdn.com/EoLX1UtKd-QSIeOkV_hk4HIcQXg=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4778-7176094-7.jpg',     
+          'https://dynamic.zacdn.com/0puvvFdSFCtTDDNC6Wk6fqIgZko=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4778-7176094-8.jpg'      
+        ],
+        createdAt: 2025-06-16T09:56:02.762Z,
+        updatedAt: 2025-06-16T09:56:02.762Z
+      },
+      {
+        name: 'MEXICO 66',
+        slug: 'onitsuka-tiger-mexico-66-white-4906865',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 2600000,
+        tags: [ 'Pria', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/5btXzRrr6wK7iGwSzt41QUju0nw=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1435-5686094-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/5btXzRrr6wK7iGwSzt41QUju0nw=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1435-5686094-1.jpg',     
+          'https://dynamic.zacdn.com/jN3uBNPrAUqJOChsUImMcV7nJKc=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1435-5686094-2.jpg',     
+          'https://dynamic.zacdn.com/WeEdaDDv3j05_DyKQnu8hjFQkWU=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1436-5686094-3.jpg',     
+          'https://dynamic.zacdn.com/OAHUexx3K2d_RECb1iRmG4qr4qQ=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1436-5686094-4.jpg',     
+          'https://dynamic.zacdn.com/dKMtihZPfjdrLNn66CWpcONaBLs=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1436-5686094-5.jpg',     
+          'https://dynamic.zacdn.com/NBA6dReMUbWdfdOGRsL6P5kXtJc=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1436-5686094-6.jpg',     
+          'https://dynamic.zacdn.com/2K3DnDQn7TSFfAjylNVwBTYm9Es=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1436-5686094-7.jpg',     
+          'https://dynamic.zacdn.com/gByzXeidUc2Aa_HW8e-uholHZYM=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1436-5686094-8.jpg'      
+        ],
+        createdAt: 2025-06-16T09:56:02.762Z,
+        updatedAt: 2025-06-16T09:56:02.762Z
+      },
+      {
+        name: 'X-CALIBER',
+        slug: 'onitsuka-tiger-x-caliber-multi-4906729',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 3100000,
+        tags: [ 'Wanita', 'Luxury', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/Nmwo1ZdUcu1MX-zah3iBSoA-U6U=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5111-9276094-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/Nmwo1ZdUcu1MX-zah3iBSoA-U6U=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5111-9276094-1.jpg',     
+          'https://dynamic.zacdn.com/kOKrWk9Un5hgNL7BnfXIb3tQ-To=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5111-9276094-2.jpg',     
+          'https://dynamic.zacdn.com/yE98QCwSUkFJh4AVAURy9Ns4f8E=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5111-9276094-3.jpg',     
+          'https://dynamic.zacdn.com/Lau78X4PrAQGX80gvoACPniKYlE=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5111-9276094-4.jpg',     
+          'https://dynamic.zacdn.com/ZfJMGDdTlOY7kaeJmDhfbPM1WEY=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5112-9276094-5.jpg',     
+          'https://dynamic.zacdn.com/HQkFetHNu_Bc7L-YZZ0GynXk2EY=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5112-9276094-6.jpg',     
+          'https://dynamic.zacdn.com/1j6D-KTsv1MZp27M1FNMXg5eS-E=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5112-9276094-7.jpg',     
+          'https://dynamic.zacdn.com/0bU1fF0j1VVC2mJv4y-rWmhVU44=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5112-9276094-8.jpg'      
+        ],
+        createdAt: 2025-06-16T09:56:02.762Z,
+        updatedAt: 2025-06-16T09:56:02.762Z
+      },
+      {
+        name: 'MEXICO 66 SLIP-ON',
+        slug: 'onitsuka-tiger-mexico-66-slip-on-multi-4906890',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 2000000,
+        tags: [ 'Wanita', 'Luxury', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/ke1RJ7IsiYSJzGmyJI1wDdXAw74=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4807-0986094-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/ke1RJ7IsiYSJzGmyJI1wDdXAw74=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4807-0986094-1.jpg',     
+          'https://dynamic.zacdn.com/s1Wx71UW-EORH5DS0LyApAiZEp8=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4807-0986094-2.jpg',     
+          'https://dynamic.zacdn.com/8tD3HVzo3k4ixYPNY2nZt7Ga5Jg=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4807-0986094-3.jpg',     
+          'https://dynamic.zacdn.com/kDB7vahFSrpxR9ihA2P7yQHg9Rc=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4808-0986094-4.jpg',     
+          'https://dynamic.zacdn.com/Rq1RbiKK0SV4ecPBEHm9P7bFPO0=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4808-0986094-5.jpg',     
+          'https://dynamic.zacdn.com/o3-p1-oEHdoZjvCJvW9WLIS65q0=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4808-0986094-6.jpg',     
+          'https://dynamic.zacdn.com/A_3q2OLGh0s13pU_mTtizaTJ_U0=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4808-0986094-7.jpg',     
+          'https://dynamic.zacdn.com/UDAH0GtxI8PFwXT25aJRtdWloug=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4809-0986094-8.jpg'      
+        ],
+        createdAt: 2025-06-16T09:56:02.762Z,
+        updatedAt: 2025-06-16T09:56:02.762Z
+      },
+      {
+        name: 'TOKUTEN',
+        slug: 'onitsuka-tiger-tokuten-black-4906762',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 2800000,
+        tags: [ 'Wanita', 'Luxury', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/XHZ7zWlh2tVakY6a5zg4nqANMpc=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5225-2676094-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/XHZ7zWlh2tVakY6a5zg4nqANMpc=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5225-2676094-1.jpg',     
+          'https://dynamic.zacdn.com/xy8RkUVMSUKsIXJ0PF4bTyCurYA=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5225-2676094-2.jpg',     
+          'https://dynamic.zacdn.com/aWkpIO9WHAkyZBGCtpshgzO1rnc=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5226-2676094-3.jpg',     
+          'https://dynamic.zacdn.com/cHlXOzes1j6Nc4gEVAwc3u-MS0w=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5226-2676094-4.jpg',     
+          'https://dynamic.zacdn.com/xVZO1NnvLxV0SZfv2k9_8s76QtM=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5226-2676094-5.jpg',     
+          'https://dynamic.zacdn.com/JwfOb2sJfod-IPUQJiCL6OUO-Eg=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5226-2676094-6.jpg',     
+          'https://dynamic.zacdn.com/3p1_cV0hOr6UoX5lylkUyzEXDy0=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5227-2676094-7.jpg',     
+          'https://dynamic.zacdn.com/h5cheETniK5iDtbXYMdJeOkiVw8=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5227-2676094-8.jpg'      
+        ],
+        createdAt: 2025-06-16T09:56:02.762Z,
+        updatedAt: 2025-06-16T09:56:02.762Z
+      },
+      {
+        name: 'MEXICO 66',
+        slug: 'onitsuka-tiger-mexico-66-white-4906785',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 2600000,
+        tags: [ 'Wanita', 'Luxury', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/ah_ADDk9aymGXnm95ECTtMSFtI4=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4879-5876094-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/ah_ADDk9aymGXnm95ECTtMSFtI4=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4879-5876094-1.jpg',     
+          'https://dynamic.zacdn.com/NtBio_mNNU6PZVxx_qE_VgZn2sc=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4879-5876094-2.jpg',     
+          'https://dynamic.zacdn.com/baM6ccF1LQqm_DRRkPMgtUO3PjY=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4879-5876094-3.jpg',     
+          'https://dynamic.zacdn.com/LazSJOT84iJsX8kLIUmQwKxRFuk=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4880-5876094-4.jpg',     
+          'https://dynamic.zacdn.com/w_wJKOY0495Z9M4MT7pXib2NVtI=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4880-5876094-5.jpg',     
+          'https://dynamic.zacdn.com/tz23V_WHrP574YUXK5gr70KHtQc=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4880-5876094-6.jpg',     
+          'https://dynamic.zacdn.com/uic4jdshcw6a48U-F-Moaj5Dr10=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4880-5876094-7.jpg',     
+          'https://dynamic.zacdn.com/4gNml4zXYjBCQCwone4ADqrZ9Z8=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4881-5876094-8.jpg'      
+        ],
+        createdAt: 2025-06-16T09:56:02.762Z,
+        updatedAt: 2025-06-16T09:56:02.762Z
+      },
+      {
+        name: 'MEXICO 66',
+        slug: 'onitsuka-tiger-mexico-66-silver-4906827',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 2600000,
+        tags: [ 'Wanita', 'Luxury', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/BuHCYA3PiuYJjHUJzrCMr4XOkSU=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4644-7286094-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/BuHCYA3PiuYJjHUJzrCMr4XOkSU=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4644-7286094-1.jpg',     
+          'https://dynamic.zacdn.com/wDZIqZjtf5wfeqpG4vpSPhsuBUM=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4644-7286094-2.jpg',     
+          'https://dynamic.zacdn.com/470QSBQksofuXzO0oZsrbe1-440=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4644-7286094-3.jpg',     
+          'https://dynamic.zacdn.com/JGByBRaB1Rka9B5mv3j7Zea1jPo=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4645-7286094-4.jpg',     
+          'https://dynamic.zacdn.com/kWG7YPQrJaTkzocDHh6Q0owp7tY=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4645-7286094-5.jpg',     
+          'https://dynamic.zacdn.com/2LzLFYRueWxSziR6QBVY0CgBkwA=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4645-7286094-6.jpg',     
+          'https://dynamic.zacdn.com/E1wkuJ03ICBJ9nBCqgsTZDKlfdQ=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4645-7286094-7.jpg',     
+          'https://dynamic.zacdn.com/eUstSyWRiEZkYLlvbdl9wyeh7Ho=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4645-7286094-8.jpg'      
+        ],
+        createdAt: 2025-06-16T09:56:02.762Z,
+        updatedAt: 2025-06-16T09:56:02.762Z
+      },
+      {
+        name: 'MEXICO RINKAN',
+        slug: 'onitsuka-tiger-mexico-rinkan-multi-4906763',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 3300000,
+        tags: [ 'Wanita', 'Luxury', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/8GtCye9jCxymX5EEoZMGv4bVnPQ=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4676-3676094-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/8GtCye9jCxymX5EEoZMGv4bVnPQ=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4676-3676094-1.jpg',     
+          'https://dynamic.zacdn.com/l51i2l59xPSySTKejcQGsEjUyrk=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4676-3676094-2.jpg',     
+          'https://dynamic.zacdn.com/-u-sGpB0lQQnUKw1hl9MWrzQI4E=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4677-3676094-3.jpg',     
+          'https://dynamic.zacdn.com/S7P7XTkMDHI3mRGXcg9T4tUrZus=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4677-3676094-4.jpg',     
+          'https://dynamic.zacdn.com/clmTobD9dE9B8tOMhIvs5yJ2Ges=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4677-3676094-5.jpg',     
+          'https://dynamic.zacdn.com/LdWsv4a1balWURT1BRrpy2uUuRc=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4677-3676094-6.jpg',     
+          'https://dynamic.zacdn.com/DbtcgduR-5moYm85Zj7yykmVBNE=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4678-3676094-7.jpg',     
+          'https://dynamic.zacdn.com/zqUBRRONbRYrw7QlZ8QQKXkJyYQ=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4678-3676094-8.jpg'      
+        ],
+        createdAt: 2025-06-16T09:56:02.762Z,
+        updatedAt: 2025-06-16T09:56:02.762Z
+      },
+      {
+        name: 'MEXICO 66',
+        slug: 'onitsuka-tiger-mexico-66-multi-4906854',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 2600000,
+        tags: [ 'Wanita', 'Luxury', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/4g5aSnTVXsGJwvvZCRYZJNA9-jA=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4714-4586094-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/4g5aSnTVXsGJwvvZCRYZJNA9-jA=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4714-4586094-1.jpg',     
+          'https://dynamic.zacdn.com/FeeQolUQ3D2VK0FDytsibXk9MLY=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4714-4586094-2.jpg',     
+          'https://dynamic.zacdn.com/sifFJt3I102VXydIbQCMCLhk7sk=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4714-4586094-3.jpg',     
+          'https://dynamic.zacdn.com/dc0AjKJx7cCMAsguz3PdY2rP0I4=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4715-4586094-4.jpg',     
+          'https://dynamic.zacdn.com/6Mw9bDwZFNb-RE0h79c8-hgFIy0=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4715-4586094-5.jpg',     
+          'https://dynamic.zacdn.com/2S5f5-ME-xwQbTFCxoI72qznLak=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4715-4586094-6.jpg',     
+          'https://dynamic.zacdn.com/odSuhB3f64TdFtWgQ0WJ0Q87UGM=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4715-4586094-7.jpg',     
+          'https://dynamic.zacdn.com/VB02KsNQ0W16ssI-ItMR_lpNaKQ=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4716-4586094-8.jpg'      
+        ],
+        createdAt: 2025-06-16T09:56:02.762Z,
+        updatedAt: 2025-06-16T09:56:02.762Z
+      },
+      {
+        name: 'SCLAW MT',
+        slug: 'onitsuka-tiger-sclaw-mt-multi-4906733',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 3100000,
+        tags: [ 'Wanita', 'Luxury', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/GqiTO5d2qf4ybweHYCs5bfw4EgY=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5122-3376094-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/GqiTO5d2qf4ybweHYCs5bfw4EgY=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5122-3376094-1.jpg',     
+          'https://dynamic.zacdn.com/gj8qq77vMZjyoD4xE_g_BzTRBBg=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5122-3376094-2.jpg',     
+          'https://dynamic.zacdn.com/iEJt20RWwqtpDjMbvbivvLHURzQ=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5122-3376094-3.jpg',     
+          'https://dynamic.zacdn.com/ypoD9hzmXmoEkIOfPYFKXfW3rDo=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5122-3376094-4.jpg',     
+          'https://dynamic.zacdn.com/b_fkFfQXtM6GcdR8qfU6Ji3KJ4M=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5123-3376094-5.jpg',     
+          'https://dynamic.zacdn.com/U_zIXQ_jUT57IE1jp2Poz9EATqk=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5123-3376094-6.jpg',     
+          'https://dynamic.zacdn.com/p5q-WsBIQyVDaMeonSv4gEJA5Hw=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5123-3376094-7.jpg',     
+          'https://dynamic.zacdn.com/ZmpJBXbblJeraU2tvTn9FGYddw8=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5123-3376094-8.jpg'      
+        ],
+        createdAt: 2025-06-16T09:56:02.762Z,
+        updatedAt: 2025-06-16T09:56:02.762Z
+      },
+      {
+        name: 'TIGER CORSAIR A55',
+        slug: 'onitsuka-tiger-tiger-corsair-a55-black-4906796',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 3500000,
+        tags: [ 'Wanita', 'Luxury', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/UR3j_7Sv5Gl4VjrFJmzkXfbTbRw=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5217-6976094-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/UR3j_7Sv5Gl4VjrFJmzkXfbTbRw=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5217-6976094-1.jpg',     
+          'https://dynamic.zacdn.com/5ffQVIdyfiQas2s3Vpl5_T0jDcs=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5217-6976094-2.jpg',     
+          'https://dynamic.zacdn.com/GLpRnXDoGd92_VkLXqVXkq__YaE=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5217-6976094-3.jpg',     
+          'https://dynamic.zacdn.com/xT1uoNlQHFbB3jD6BrhK55U8Hog=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5217-6976094-4.jpg',     
+          'https://dynamic.zacdn.com/_Jr0vlzTd7j3oAKA_yr41n1XhNI=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5218-6976094-5.jpg',     
+          'https://dynamic.zacdn.com/pHXAx6IfN3Wp7eLfrlgJP2FCyas=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5218-6976094-6.jpg',     
+          'https://dynamic.zacdn.com/q6hM3pxrZU8-kszFrouKY_KjfvE=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5218-6976094-7.jpg',     
+          'https://dynamic.zacdn.com/WYj6brj6TvaG7nKnhLR7kkLOFkQ=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5218-6976094-8.jpg'      
+        ],
+        createdAt: 2025-06-16T09:56:02.762Z,
+        updatedAt: 2025-06-16T09:56:02.762Z
+      },
+      {
+        name: 'SCLAW MT',
+        slug: 'onitsuka-tiger-sclaw-mt-multi-4906731',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 3100000,
+        tags: [ 'Wanita', 'Luxury', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/tW2S5LBRUhm6Ky63cPz3zXo8Wmo=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4673-1376094-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/tW2S5LBRUhm6Ky63cPz3zXo8Wmo=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4673-1376094-1.jpg',     
+          'https://dynamic.zacdn.com/hilBf6k4Cm9ZEUCbMtzHYRwnDNs=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4674-1376094-2.jpg',     
+          'https://dynamic.zacdn.com/dIbqQbtGcu5NT6FjGR8TOtXEHBE=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4674-1376094-3.jpg',     
+          'https://dynamic.zacdn.com/F5eurWUS0p5OUOQJQnKKD-fYnXc=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4674-1376094-4.jpg',     
+          'https://dynamic.zacdn.com/SU0GaBcDWXf9sTPdJGJR5Wrqx0Y=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4674-1376094-5.jpg',     
+          'https://dynamic.zacdn.com/CiUB79Vzx03N8uCWxsSliZQMuFc=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4675-1376094-6.jpg',     
+          'https://dynamic.zacdn.com/Z7Aoxuz-aQq8pqMOuj2ujLXyRUE=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4675-1376094-7.jpg',     
+          'https://dynamic.zacdn.com/bhTr_aufI0YPAcLYXjUx00wE494=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4675-1376094-8.jpg'      
+        ],
+        createdAt: 2025-06-16T09:56:02.762Z,
+        updatedAt: 2025-06-16T09:56:02.762Z
+      },
+      {
+        name: 'MEXICO 66 SD',
+        slug: 'onitsuka-tiger-mexico-66-sd-multi-4906876',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 3100000,
+        tags: [ 'Wanita', 'Luxury', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/8Jq5y2OgIq-SWUJsscu_bRCE4c8=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4746-6786094-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/8Jq5y2OgIq-SWUJsscu_bRCE4c8=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4746-6786094-1.jpg',     
+          'https://dynamic.zacdn.com/m9nENxYpLXjKMCwMliHbHim1Rfg=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4746-6786094-2.jpg',     
+          'https://dynamic.zacdn.com/3chH6ySgrxasZHex4czumJ-rj_o=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4747-6786094-3.jpg',     
+          'https://dynamic.zacdn.com/FTmCBtS-qqdMaXFkhs1s1FMpy7Y=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4747-6786094-4.jpg',     
+          'https://dynamic.zacdn.com/FzY9iyrK7QlfVZwir6Cp9XRILzk=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4747-6786094-5.jpg',     
+          'https://dynamic.zacdn.com/thgHsqjn6dCsHfKMfF2Nxn0JLBA=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4747-6786094-6.jpg',     
+          'https://dynamic.zacdn.com/dAgnM_ncgQVyIx1aNHa40cBQwjI=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4748-6786094-7.jpg',     
+          'https://dynamic.zacdn.com/8o77iMEsHOlKGpGW3hkpnNInkfA=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4748-6786094-8.jpg'      
+        ],
+        createdAt: 2025-06-16T09:56:02.762Z,
+        updatedAt: 2025-06-16T09:56:02.762Z
+      },
+      {
+        name: 'MEXICO 66 SD',
+        slug: 'onitsuka-tiger-mexico-66-sd-multi-4906881',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 3300000,
+        tags: [ 'Wanita', 'Luxury', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/ZawvqjKT0nkSUOa5-dn5BKhRuNM=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4771-1886094-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/ZawvqjKT0nkSUOa5-dn5BKhRuNM=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4771-1886094-1.jpg',     
+          'https://dynamic.zacdn.com/qQ5SwUSkF9_KBCS8ZyQb48gvtDE=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4771-1886094-2.jpg',     
+          'https://dynamic.zacdn.com/92iqpG4whCk2f6RirxeCo4A6DOw=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4771-1886094-3.jpg',     
+          'https://dynamic.zacdn.com/6M1kkoFQCfvb1DLCIK0wAPkywtk=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4772-1886094-4.jpg',     
+          'https://dynamic.zacdn.com/rK2wHFo5tD64gx_BC-nsTVPoTuI=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4772-1886094-5.jpg',     
+          'https://dynamic.zacdn.com/mpJUe5Pju90bGlJeGmvcQj1eVRI=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4772-1886094-6.jpg',     
+          'https://dynamic.zacdn.com/Qqme0AcKnOj8YBuwIhaBgeavEoI=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4772-1886094-7.jpg',     
+          'https://dynamic.zacdn.com/c99ncVsDuFcPe4leQec4rKNlaa8=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-4773-1886094-8.jpg'      
+        ],
+        createdAt: 2025-06-16T09:56:02.762Z,
+        updatedAt: 2025-06-16T09:56:02.762Z
+      },
+      {
+        name: 'MEXICO 66 PARATY',
+        slug: 'onitsuka-tiger-mexico-66-paraty-blue-4906869',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 2000000,
+        tags: [ 'Pria', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/FUNqhPoX-_ei8NadSwx0LDUQz3U=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1439-9686094-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/FUNqhPoX-_ei8NadSwx0LDUQz3U=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1439-9686094-1.jpg',     
+          'https://dynamic.zacdn.com/kPK0HsAG8zA28bjAujFqyBtAzrE=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1440-9686094-2.jpg',     
+          'https://dynamic.zacdn.com/Rku--FzkxLpQSVdixvwgd513cbg=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1440-9686094-3.jpg',     
+          'https://dynamic.zacdn.com/SAJB2IakDE7VkzHeBTOs5Oj5DxY=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1440-9686094-4.jpg',     
+          'https://dynamic.zacdn.com/LlquGbX0LmHuTXPIDxAsj9AuwcM=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1440-9686094-5.jpg',     
+          'https://dynamic.zacdn.com/TEjmChP225GqAukQYMKWpk4rPcs=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1440-9686094-6.jpg',     
+          'https://dynamic.zacdn.com/thA15DekOcN72fWjdpGpE0HlJ5I=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1441-9686094-7.jpg',     
+          'https://dynamic.zacdn.com/3pOrI_t6UTiEjNHkBjHo5V7odcw=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-1441-9686094-8.jpg'      
+        ],
+        createdAt: 2025-06-16T09:56:02.762Z,
+        updatedAt: 2025-06-16T09:56:02.762Z
+      },
+      {
+        name: 'CALIFORNIA 78 EX',
+        slug: 'onitsuka-tiger-california-78-ex-multi-4914037',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac lacinia nulla. Fusce dolor eros, imperdiet quis accumsan sed, tincidunt sed dui. Praesent
+     euismod, nisl et iaculis auctor, risus nisl pharetra eros, a porta tortor arcu ut mauris. Nulla interdum mollis lorem. Cras ornare leo risus, non iaculis ante posuere nec
+    . Mauris viverra velit non ipsum aliquam, a imperdiet dui pharetra. Sed quis ipsum purus. Aliquam vitae malesuada sem. Suspendisse potenti. Aenean odio nulla, convallis eu
+     massa at, consequat lacinia nibh.',
+        excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius auctor lorem, id venenatis dolor egestas ac. Mauris et mi a nibh ullamcorper ornare qu
+    is in ex. ',
+        price: 2600000,
+        tags: [ 'Wanita', 'Luxury', 'Sepatu', 'Sneakers' ],
+        thumbnail: 'https://dynamic.zacdn.com/NoI-Rqn-fiAmEGRPfaTNz7DCebk=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5945-7304194-1.j
+    pg',
+        images: [
+          'https://dynamic.zacdn.com/NoI-Rqn-fiAmEGRPfaTNz7DCebk=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5945-7304194-1.jpg',
+          'https://dynamic.zacdn.com/1OZpJvtiEzz4q6yO3Ridn3Khe20=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5945-7304194-2.jpg',
+          'https://dynamic.zacdn.com/dgn61Jky0WE0B2m7mGxvSTJLl60=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5945-7304194-3.jpg',
+          'https://dynamic.zacdn.com/mEuSsoaXlWocDCJ-Y85UUbsIqI8=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5945-7304194-4.jpg',
+          'https://dynamic.zacdn.com/hxICvtOBDXf3w9EHajIkv8LBh0Y=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5946-7304194-5.jpg',
+          'https://dynamic.zacdn.com/2ImV4CFgbhCAfAFB-9SSyGFgJt4=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5946-7304194-6.jpg',
+          'https://dynamic.zacdn.com/8p0-xeIaJ1YyNIrbGdDLmm5qMPE=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5946-7304194-7.jpg',
+          'https://dynamic.zacdn.com/njWtVLe7ztEJWVG9lFp2MmcsZug=/0x770/filters:quality(20):format(webp)/https://static-id.zacdn.com/p/onitsuka-tiger-5946-7304194-8.jpg'
+        ],
+        createdAt: 2025-06-16T09:56:02.762Z,
+        updatedAt: 2025-06-16T09:56:02.762Z
+      }
+]
