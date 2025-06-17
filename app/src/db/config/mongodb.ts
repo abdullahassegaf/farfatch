@@ -1,12 +1,12 @@
 import { Db, MongoClient } from "mongodb";
 
-const uri = process.env.MONGODB_URI || "mondodb://localhost:27017";
+const uri = process.env.MONGODB_URI || "mongodb://localhost:27017";
 
 const client: MongoClient = new MongoClient(uri);
 let db: Db;
 
 export function connect() {
-   db = client.db("gc-2");
+   db = client.db("gs2");
    return db;
 }
 

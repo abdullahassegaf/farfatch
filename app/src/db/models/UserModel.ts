@@ -2,6 +2,7 @@ import { z } from "zod";
 import { getDb } from "../config/mongodb";
 import bcrypt from "bcryptjs";
 import CustomError from "../helpers/CustomError";
+import { ObjectId } from "mongodb";
 
 export interface IUser {
    name: string;
@@ -21,6 +22,7 @@ export default class USerModel {
    static getCollection() {
       return getDb().collection<IUser>("users");
    }
+
    static async register(payload: IUser) {
       userSchema.parse(payload);
 
@@ -29,5 +31,7 @@ export default class USerModel {
       if (user) throw new CustomError("User already exists");
       payload.password = await bcrypt.hash(payload.password, 10);
       await collection.insertOne(payload);
+
+      return "User registered successfully";
    }
 }

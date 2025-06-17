@@ -1,11 +1,11 @@
 import { redirect } from "next/navigation";
 
-type IProps = {
+export default async function RegisterPage({
+   searchParams,
+}: {
    searchParams: { [key: string]: string | string[] | undefined };
-};
-
-export default function RegisterPage(props: IProps) {
-   const { error } = props.searchParams;
+}) {
+   const { error } = await searchParams;
    const handleRegister = async (param: FormData) => {
       "use server";
 
@@ -28,10 +28,12 @@ export default function RegisterPage(props: IProps) {
             password,
          }),
       });
-      const data = await resp.json();
-      if (!resp.ok) {
-         redirect(`/register?error=${data.message}`);
-      }
+      //   const data = await resp.json();
+      //   console.log(data);
+
+      //   if (!resp.ok) {
+      //      redirect(`/register?error=${data.message}`);
+      //   }
       redirect("/login");
    };
    return (

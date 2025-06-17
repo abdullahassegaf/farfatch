@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export interface ILogin {
    username: string;
    password: string;
@@ -32,9 +34,12 @@ export default function Login() {
                   <button className="py-2 px-4 text-sm font-medium text-center text-black border-b-2 border-black">
                      SIGN IN
                   </button>
-                  <button className="py-2 px-4 text-sm font-medium text-center text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                  <Link
+                     href="/register"
+                     className="py-2 px-4 text-sm font-medium text-center text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                  >
                      I'M NEW HERE
-                  </button>
+                  </Link>
                </div>
             </div>
 
