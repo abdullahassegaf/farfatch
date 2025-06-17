@@ -21,6 +21,8 @@ export default class ProductModel {
    static async findAll() {
       const collection = this.getCollection();
       const products = await collection.find().toArray();
+      console.log(products, ",,,,,,");
+
       return products;
    }
 }
