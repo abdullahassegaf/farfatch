@@ -1,3 +1,4 @@
+import { formatRupiah } from "@/db/helpers/formatRupiah";
 import { ObjectId } from "mongodb";
 import Link from "next/link";
 
@@ -59,9 +60,9 @@ export default async function Home() {
                         </div>
                         <div className="flex items-center gap-2 mb-1">
                            <span className="font-bold text-lg">
-                              {product.price}
+                              {formatRupiah(product.price)}
                            </span>
-                        </div>{" "}
+                        </div>
                      </div>
                   </Link>
                ))}

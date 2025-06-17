@@ -1,4 +1,5 @@
 import { getDb } from "../config/mongodb";
+import { formatRupiah } from "../helpers/formatRupiah";
 
 export interface IProducts {
    id: number;
@@ -21,8 +22,12 @@ export default class ProductModel {
    static async findAll() {
       const collection = this.getCollection();
       const products = await collection.find().toArray();
-      console.log(products, ",,,,,,");
-
       return products;
+   }
+   static async findBySlug(slug: string) {
+      const collection = this.getCollection();
+      const product = await collection.findOne({ slug });
+      if (!product) throw new Error("Product not found");
+      return product;
    }
 }
