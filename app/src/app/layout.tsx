@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
    variable: "--font-geist-sans",
@@ -29,30 +30,40 @@ export default function RootLayout({
          >
             <nav className="bg-white border-b border-gray-200 w-full">
                <div className="max-w-screen-xl mx-auto flex items-center justify-between py-4 px-8">
-                  {/* Left menu */}
-                  <ul className="flex items-center gap-10 text-lg">
-                     <li>
-                        <a
-                           href="#"
-                           className="text-gray-800 hover:font-semibold"
-                        >
-                           Womenswear
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#" className="font-bold text-gray-900">
-                           Menswear
-                        </a>
-                     </li>
-                     <li>
-                        <a
-                           href="#"
-                           className="text-gray-800 hover:font-semibold"
-                        >
-                           Kidswear
-                        </a>
-                     </li>
-                  </ul>
+                  {/* Left menu - Search Input */}
+                  <div className="flex items-center">
+                     <form className="w-full">
+                        <div className="flex items-center border-b border-gray-400 pb-1">
+                           <svg
+                              className="w-6 h-6 text-gray-400 mr-2"
+                              aria-hidden="true"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                           >
+                              <circle
+                                 cx="11"
+                                 cy="11"
+                                 r="8"
+                                 stroke="currentColor"
+                                 strokeWidth="2"
+                              />
+                              <path
+                                 d="M21 21l-4.35-4.35"
+                                 stroke="currentColor"
+                                 strokeWidth="2"
+                                 strokeLinecap="round"
+                              />
+                           </svg>
+                           <input
+                              type="search"
+                              className="w-full outline-none bg-transparent text-gray-700 placeholder-gray-500 text-lg"
+                              placeholder="What are you looking ?"
+                           />
+                        </div>
+                     </form>
+                  </div>
+
                   {/* Center logo */}
                   <div className="flex-1 flex justify-center">
                      <a
@@ -62,10 +73,13 @@ export default function RootLayout({
                         FARFATCH
                      </a>
                   </div>
+
                   {/* Right menu */}
                   <div className="flex items-center gap-6 min-w-[350px] justify-end">
                      {/* {name profile} */}
-                     <div className="text-gray-800">hello, John Doe</div>
+                     <div className="text-gray-800">
+                        <a href="/profile">hello, John Doe</a>
+                     </div>
                      {/* User icon */}
                      <a href="/profile" className="inline-flex items-center">
                         <svg
@@ -81,9 +95,6 @@ export default function RootLayout({
                            <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
                         </svg>
                      </a>
-                     {/* Username */}
-
-                     {/* Bronze badge */}
 
                      <a href="/wishlist">
                         <svg
@@ -113,6 +124,9 @@ export default function RootLayout({
                            <path d="M8 7V5a4 4 0 1 1 8 0v2" />
                         </svg>
                      </a>
+                     {/* {login / logout} */}
+                     <Link href="/login">Login</Link>
+                     <Link href="/register">Register</Link>
                   </div>
                </div>
             </nav>
