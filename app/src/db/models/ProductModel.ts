@@ -1,5 +1,4 @@
 import { getDb } from "../config/mongodb";
-import { formatRupiah } from "../helpers/formatRupiah";
 
 export interface IProducts {
    id: number;

@@ -66,12 +66,12 @@ export default function RootLayout({
 
                   {/* Center logo */}
                   <div className="flex-1 flex justify-center">
-                     <a
+                     <Link
                         href="/"
                         className="text-4xl font-extrabold tracking-widest text-black select-none"
                      >
                         FARFATCH
-                     </a>
+                     </Link>
                   </div>
 
                   {/* Right menu */}
@@ -81,7 +81,7 @@ export default function RootLayout({
                         <a href="/profile">hello, John Doe</a>
                      </div>
                      {/* User icon */}
-                     <a href="/profile" className="inline-flex items-center">
+                     <Link href="/profile" className="inline-flex items-center">
                         <svg
                            width="24"
                            height="24"
@@ -94,9 +94,9 @@ export default function RootLayout({
                            <circle cx="12" cy="8" r="4" />
                            <path d="M4 20c0-4 4-6 8-6s8 2 8 6" />
                         </svg>
-                     </a>
+                     </Link>
 
-                     <a href="/wishlist">
+                     <Link href="/wishlist">
                         <svg
                            width="24"
                            height="24"
@@ -108,9 +108,9 @@ export default function RootLayout({
                         >
                            <path d="M12 21s-6.5-4.35-9-7.5C-1.5 8.5 3.5 3 8.5 7.5c2.5 2.25 3.5 2.25 6 0C20.5 3 25.5 8.5 21 13.5c-2.5 3.15-9 7.5-9 7.5z" />
                         </svg>
-                     </a>
+                     </Link>
                      {/* Bag icon */}
-                     <a href="/cart">
+                     <Link href="/cart">
                         <svg
                            width="24"
                            height="24"
@@ -123,15 +123,163 @@ export default function RootLayout({
                            <rect x="4" y="7" width="16" height="13" rx="2" />
                            <path d="M8 7V5a4 4 0 1 1 8 0v2" />
                         </svg>
-                     </a>
+                     </Link>
                      {/* {login / logout} */}
                      <Link href="/login">Login</Link>
                      <Link href="/register">Register</Link>
                   </div>
                </div>
             </nav>
-
             {children}
+
+            {/* Footer */}
+            <footer className="bg-gray-200 mt-16 py-10 px-2 sm:px-4">
+               <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-gray-700 w-full">
+                  {/* Customer Service */}
+                  <div>
+                     <div className="font-bold mb-3">Customer Service</div>
+                     <ul className="space-y-2">
+                        <li>
+                           <a href="#" className="hover:underline">
+                              Contact us
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" className="hover:underline">
+                              FAQs
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" className="hover:underline">
+                              Orders and delivery
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" className="hover:underline">
+                              Returns and refunds
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" className="hover:underline">
+                              Payment and pricing
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" className="hover:underline">
+                              Cryptocurrency payments
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" className="hover:underline">
+                              Promotion terms and conditions
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" className="hover:underline">
+                              FARFETCH Customer Promise
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+                  {/* About FARFETCH */}
+                  <div>
+                     <div className="font-bold mb-3">About FARFETCH</div>
+                     <ul className="space-y-2">
+                        <li>
+                           <a href="#" className="hover:underline">
+                              About us
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" className="hover:underline">
+                              FARFETCH partner boutiques
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" className="hover:underline">
+                              Careers
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" className="hover:underline">
+                              FARFETCH app
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" className="hover:underline">
+                              Modern slavery statement
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" className="hover:underline">
+                              FARFETCH Advertising
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+                  {/* Discounts and membership */}
+                  <div>
+                     <div className="font-bold mb-3">
+                        Discounts and membership
+                     </div>
+                     <ul className="space-y-2">
+                        <li>
+                           <a href="#" className="hover:underline">
+                              Affiliate program
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" className="hover:underline">
+                              Refer a friend
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" className="hover:underline">
+                              FARFETCH membership
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" className="hover:underline">
+                              Student discount UNiDAYS
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" className="hover:underline">
+                              Student Beans and Graduates
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#" className="hover:underline">
+                              Student and Youth discount
+                           </a>
+                        </li>
+                     </ul>
+                     <div className="mt-6">
+                        <div className="font-bold mb-2">Follow us</div>
+                        <div className="flex space-x-4 text-xl">
+                           <a href="#" aria-label="Instagram">
+                              <span className="fi fi-brands-instagram" />
+                           </a>
+                           <a href="#" aria-label="Facebook">
+                              <span className="fi fi-brands-facebook" />
+                           </a>
+                           <a href="#" aria-label="Pinterest">
+                              <span className="fi fi-brands-pinterest" />
+                           </a>
+                           <a href="#" aria-label="Twitter">
+                              <span className="fi fi-brands-twitter" />
+                           </a>
+                           <a href="#" aria-label="Snapchat">
+                              <span className="fi fi-brands-snapchat" />
+                           </a>
+                           <a href="#" aria-label="YouTube">
+                              <span className="fi fi-brands-youtube" />
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </footer>
          </body>
       </html>
    );

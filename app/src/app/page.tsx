@@ -1,6 +1,7 @@
 import { formatRupiah } from "@/db/helpers/formatRupiah";
 import { ObjectId } from "mongodb";
 import Link from "next/link";
+import BannerCarousel from "./components/BannerCarousel";
 
 export interface IProducts {
    _id: ObjectId;
@@ -24,9 +25,22 @@ export default async function Home() {
          <h1 className="text-4xl font-bold mb-8 text-center">
             Welcome to the Home Page
          </h1>
+
+         <div className="flex flex-col items-center mb-8">
+            <h2 className="text-2xl font-bold text-center mb-2">
+               Everyday's FARFATCH Flash Sale
+               <span role="img" aria-label="lightning">
+                  ⚡
+               </span>
+            </h2>
+            <div className="w-full max-w-5xl rounded-xl overflow-hidden shadow-lg bg-white">
+               <BannerCarousel />
+            </div>
+         </div>
+
          <div className="flex items-center justify-center min-h-screen bg-gray-200">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-               {products.map((product) => (
+               {products.slice(0, 8).map((product) => (
                   <Link
                      href={`/product/${product.slug}`}
                      key={product._id.toString()}
@@ -68,152 +82,13 @@ export default async function Home() {
                ))}
             </div>
          </div>
-         {/* Footer */}
-         <footer className="bg-gray-200 mt-16 py-10 px-2 sm:px-4">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-gray-700 w-full">
-               {/* Customer Service */}
-               <div>
-                  <div className="font-bold mb-3">Customer Service</div>
-                  <ul className="space-y-2">
-                     <li>
-                        <a href="#" className="hover:underline">
-                           Contact us
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#" className="hover:underline">
-                           FAQs
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#" className="hover:underline">
-                           Orders and delivery
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#" className="hover:underline">
-                           Returns and refunds
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#" className="hover:underline">
-                           Payment and pricing
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#" className="hover:underline">
-                           Cryptocurrency payments
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#" className="hover:underline">
-                           Promotion terms and conditions
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#" className="hover:underline">
-                           FARFETCH Customer Promise
-                        </a>
-                     </li>
-                  </ul>
-               </div>
-               {/* About FARFETCH */}
-               <div>
-                  <div className="font-bold mb-3">About FARFETCH</div>
-                  <ul className="space-y-2">
-                     <li>
-                        <a href="#" className="hover:underline">
-                           About us
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#" className="hover:underline">
-                           FARFETCH partner boutiques
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#" className="hover:underline">
-                           Careers
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#" className="hover:underline">
-                           FARFETCH app
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#" className="hover:underline">
-                           Modern slavery statement
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#" className="hover:underline">
-                           FARFETCH Advertising
-                        </a>
-                     </li>
-                  </ul>
-               </div>
-               {/* Discounts and membership */}
-               <div>
-                  <div className="font-bold mb-3">Discounts and membership</div>
-                  <ul className="space-y-2">
-                     <li>
-                        <a href="#" className="hover:underline">
-                           Affiliate program
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#" className="hover:underline">
-                           Refer a friend
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#" className="hover:underline">
-                           FARFETCH membership
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#" className="hover:underline">
-                           Student discount UNiDAYS
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#" className="hover:underline">
-                           Student Beans and Graduates
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#" className="hover:underline">
-                           Student and Youth discount
-                        </a>
-                     </li>
-                  </ul>
-                  <div className="mt-6">
-                     <div className="font-bold mb-2">Follow us</div>
-                     <div className="flex space-x-4 text-xl">
-                        <a href="#" aria-label="Instagram">
-                           <span className="fi fi-brands-instagram" />
-                        </a>
-                        <a href="#" aria-label="Facebook">
-                           <span className="fi fi-brands-facebook" />
-                        </a>
-                        <a href="#" aria-label="Pinterest">
-                           <span className="fi fi-brands-pinterest" />
-                        </a>
-                        <a href="#" aria-label="Twitter">
-                           <span className="fi fi-brands-twitter" />
-                        </a>
-                        <a href="#" aria-label="Snapchat">
-                           <span className="fi fi-brands-snapchat" />
-                        </a>
-                        <a href="#" aria-label="YouTube">
-                           <span className="fi fi-brands-youtube" />
-                        </a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </footer>
+         <div className="flex justify-center mt-8">
+            <Link href="/product">
+               <button className="px-8 py-3 bg-black text-white rounded-lg font-semibold shadow hover:bg-gray-900 transition-all duration-200">
+                  See All
+               </button>
+            </Link>
+         </div>
       </div>
    );
 }
