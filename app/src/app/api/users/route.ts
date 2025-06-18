@@ -1,4 +1,5 @@
 import CustomError from "@/db/helpers/CustomError";
+import errorHandler from "@/db/helpers/errorHandler";
 import USerModel, { IUser } from "@/db/models/UserModel";
 import { ZodError } from "zod";
 
@@ -9,21 +10,11 @@ export async function POST(req: Request) {
 
       return Response.json({ message }, { status: 201 });
    } catch (error) {
-      if (error instanceof ZodError) {
-         const err = error.errors[0];
-         return Response.json(
-            { message: `${err.path[0]} - ${err.message}` },
-            { status: 400 }
-         );
-      } else if (error instanceof CustomError) {
-         return Response.json(
-            { message: error.message },
-            { status: error.status }
-         );
-      }
+      const result = errorHandler(error);
+
       return Response.json(
-         { message: "Internal Server Error" },
-         { status: 500 }
+         { message: result.message },
+         { status: result.status }
       );
    }
 }

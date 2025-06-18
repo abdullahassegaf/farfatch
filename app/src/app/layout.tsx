@@ -76,11 +76,8 @@ export default function RootLayout({
 
                   {/* Right menu */}
                   <div className="flex items-center gap-6 min-w-[350px] justify-end">
-                     {/* {name profile} */}
-                     <div className="text-gray-800">
-                        <a href="/profile">hello, John Doe</a>
-                     </div>
                      {/* User icon */}
+
                      <Link href="/profile" className="inline-flex items-center">
                         <svg
                            width="24"
@@ -109,21 +106,7 @@ export default function RootLayout({
                            <path d="M12 21s-6.5-4.35-9-7.5C-1.5 8.5 3.5 3 8.5 7.5c2.5 2.25 3.5 2.25 6 0C20.5 3 25.5 8.5 21 13.5c-2.5 3.15-9 7.5-9 7.5z" />
                         </svg>
                      </Link>
-                     {/* Bag icon */}
-                     <Link href="/cart">
-                        <svg
-                           width="24"
-                           height="24"
-                           fill="none"
-                           stroke="currentColor"
-                           strokeWidth="2"
-                           viewBox="0 0 24 24"
-                           className="text-gray-700"
-                        >
-                           <rect x="4" y="7" width="16" height="13" rx="2" />
-                           <path d="M8 7V5a4 4 0 1 1 8 0v2" />
-                        </svg>
-                     </Link>
+
                      {/* {login / logout} */}
                      <Link href="/login">Login</Link>
                      <Link href="/register">Register</Link>

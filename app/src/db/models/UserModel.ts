@@ -2,13 +2,18 @@ import { z } from "zod";
 import { getDb } from "../config/mongodb";
 import bcrypt from "bcryptjs";
 import CustomError from "../helpers/CustomError";
-import { ObjectId } from "mongodb";
+import jwt from "jsonwebtoken";
 
 export interface IUser {
    name: string;
    email: string;
    password: string;
    username: string;
+}
+
+export interface ILogin {
+   username: string;
+   password: string;
 }
 
 const userSchema = z.object({
@@ -27,11 +32,38 @@ export default class USerModel {
       userSchema.parse(payload);
 
       const collection = this.getCollection();
-      const user = await collection.findOne({ email: payload.email });
-      if (user) throw new CustomError("User already exists");
+      const userEmail = await collection.findOne({
+         email: payload.email,
+      });
+      const userUsername = await collection.findOne({
+         username: payload.username,
+      });
+      if (userEmail) throw new CustomError("Email already exists", 400);
+      if (userUsername) throw new CustomError("Username already exists", 400);
       payload.password = await bcrypt.hash(payload.password, 10);
       await collection.insertOne(payload);
 
       return "User registered successfully";
+   }
+   static async login(payload: ILogin): Promise<string> {
+      const collection = this.getCollection();
+      const { username, password } = payload;
+      if (!username) throw new CustomError("Username is required", 400);
+      if (!password) throw new CustomError("Password is required", 400);
+      const user = await collection.findOne({ username });
+      if (!user) throw new CustomError("Invalid username or password", 401);
+      const isValidPassword = bcrypt.compareSync(password, user.password);
+      if (!isValidPassword)
+         throw new CustomError("Invalid username or password", 401);
+
+      const token = jwt.sign(
+         { _id: user._id, username: user.username },
+         process.env.JWT_SECRET as string,
+         {
+            expiresIn: "1d",
+         }
+      );
+
+      return token;
    }
 }

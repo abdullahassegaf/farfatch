@@ -28,12 +28,12 @@ export default async function RegisterPage({
             password,
          }),
       });
-      //   const data = await resp.json();
-      //   console.log(data);
+      const data = await resp.json();
+      console.log(data);
 
-      //   if (!resp.ok) {
-      //      redirect(`/register?error=${data.message}`);
-      //   }
+      if (!resp.ok) {
+         redirect(`/register?error=${data.message}`);
+      }
       redirect("/login");
    };
    return (

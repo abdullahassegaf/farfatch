@@ -9,7 +9,7 @@ export interface IProducts {
    price: number;
    tags: string[];
    thumbnail: string;
-   image: string[];
+   images: string[];
    createdAt: Date;
    updatedAt: Date;
 }

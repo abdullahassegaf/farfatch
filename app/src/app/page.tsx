@@ -22,10 +22,6 @@ export default async function Home() {
    const products: IProducts[] = await resp.json();
    return (
       <div className="min-h-screen bg-gray-100 p-8">
-         <h1 className="text-4xl font-bold mb-8 text-center">
-            Welcome to the Home Page
-         </h1>
-
          <div className="flex flex-col items-center mb-8">
             <h2 className="text-2xl font-bold text-center mb-2">
                Everyday's FARFATCH Flash Sale

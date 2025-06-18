@@ -11,6 +11,7 @@ export async function generateMetadata({ params }: IProps): Promise<Metadata> {
    const { slug } = await params;
    const resp = await fetch(`http://localhost:3000/api/products/${slug}`);
    const product: IProducts = await resp.json();
+
    return {
       title: product.name,
       description: product.description,
@@ -34,54 +35,30 @@ export default async function ProductDetail(props: IProps) {
    return (
       <div className="flex flex-col md:flex-row gap-8 max-w-5xl mx-auto py-10 px-4">
          {/* Images */}
-         <div className="flex flex-col gap-4 md:w-1/2">
-            <div className="flex gap-4">
-               <Image
-                  src={
-                     product.image?.[0] ||
-                     product.thumbnail ||
-                     "https://placehold.co/300x200/png"
-                  }
-                  alt={product.name}
-                  width={220}
-                  height={120}
-                  className="rounded-lg object-contain border w-40 h-24"
-               />
-               <Image
-                  src={
-                     product.image?.[1] ||
-                     product.thumbnail ||
-                     "https://placehold.co/300x200/png"
-                  }
-                  alt={product.name}
-                  width={220}
-                  height={120}
-                  className="rounded-lg object-contain border w-40 h-24"
-               />
-            </div>
-            <div className="flex gap-4">
-               <Image
-                  src={
-                     product.image?.[2] ||
-                     product.thumbnail ||
-                     "https://placehold.co/300x200/png"
-                  }
-                  alt={product.name}
-                  width={220}
-                  height={120}
-                  className="rounded-lg object-contain border w-40 h-24"
-               />
-               <Image
-                  src={
-                     product.image?.[3] ||
-                     product.thumbnail ||
-                     "https://placehold.co/300x200/png"
-                  }
-                  alt={product.name}
-                  width={220}
-                  height={120}
-                  className="rounded-lg object-contain border w-40 h-24"
-               />
+         <div className="md:w-1/2">
+            <div className="grid grid-cols-2 gap-4">
+               {product.images && product.images.length > 0 ? (
+                  product.images.map((img, idx) => (
+                     <Image
+                        key={img}
+                        src={img}
+                        alt={product.name + " image " + (idx + 1)}
+                        width={300}
+                        height={200}
+                        className="rounded-lg object-cover border w-full h-40"
+                     />
+                  ))
+               ) : (
+                  <Image
+                     src={
+                        product.thumbnail || "https://placehold.co/300x200/png"
+                     }
+                     alt={product.name}
+                     width={300}
+                     height={200}
+                     className="rounded-lg object-cover border w-full h-40"
+                  />
+               )}
             </div>
          </div>
          {/* Product Info */}
@@ -89,12 +66,12 @@ export default async function ProductDetail(props: IProps) {
             <h1 className="text-2xl font-bold mb-2">{product.name}</h1>
             <div className="text-gray-500 mb-2">{product.description}</div>
             <div className="flex items-center gap-2 mb-2">
-               <span className="text-xl font-bold text-red-600">
+               <span className="text-xl font-bold text-black-600">
                   {formatRupiah(product.price)}
                </span>
             </div>
             <button className="bg-black text-white py-3 rounded-lg font-semibold text-lg mt-4 hover:bg-gray-800 transition">
-               Add To Bag
+               Add To Wishlist
             </button>
             <div className="text-sm text-gray-500 mt-2">
                Estimated delivery
