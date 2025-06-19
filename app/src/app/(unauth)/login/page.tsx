@@ -1,9 +1,12 @@
 "use client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Swal from "sweetalert2";
 import { setCookie } from "./action";
+import AuthContext from "@/context/AuthContext";
+import { get } from "http";
+import { getCookie } from "@/app/components/actions";
 
 export interface ILogin {
    username: string;
@@ -15,6 +18,7 @@ export default function Login() {
       username: "",
       password: "",
    });
+   const { setToken } = useContext(AuthContext);
    const router = useRouter();
    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       const { name, value } = e.target;
@@ -44,6 +48,8 @@ export default function Login() {
          return;
       }
       await setCookie("access_token", data.token);
+      const cookie = await getCookie("access_token");
+      setToken(cookie?.value || null);
       router.push("/");
    };
    return (
