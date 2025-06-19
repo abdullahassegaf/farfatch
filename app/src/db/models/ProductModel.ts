@@ -29,4 +29,24 @@ export default class ProductModel {
       if (!product) throw new Error("Product not found");
       return product;
    }
+   static async search(query: string) {
+      const collection = this.getCollection();
+
+      // Create a regex pattern for case-insensitive search
+      const pattern = new RegExp(query, "i");
+
+      // Search in multiple fields
+      const products = await collection
+         .find({
+            $or: [
+               { name: { $regex: pattern } },
+               { description: { $regex: pattern } },
+               { excerpt: { $regex: pattern } },
+               { tags: { $elemMatch: { $regex: pattern } } },
+            ],
+         })
+         .toArray();
+
+      return products;
+   }
 }

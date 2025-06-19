@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
-import { deleteCookie, getCookie } from "./actions";
+import { deleteCookie } from "./actions";
 import { useRouter } from "next/navigation";
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import AuthContext from "@/context/AuthContext";
 
 export default function Navbar() {
@@ -18,38 +18,7 @@ export default function Navbar() {
       <nav className="bg-white border-b border-gray-200 w-full">
          <div className="max-w-screen-xl mx-auto flex items-center justify-between py-4 px-8">
             {/* Left menu - Search Input */}
-            <div className="flex items-center">
-               <form className="w-full">
-                  <div className="flex items-center border-b border-gray-400 pb-1">
-                     <svg
-                        className="w-6 h-6 text-gray-400 mr-2"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                     >
-                        <circle
-                           cx="11"
-                           cy="11"
-                           r="8"
-                           stroke="currentColor"
-                           strokeWidth="2"
-                        />
-                        <path
-                           d="M21 21l-4.35-4.35"
-                           stroke="currentColor"
-                           strokeWidth="2"
-                           strokeLinecap="round"
-                        />
-                     </svg>
-                     <input
-                        type="search"
-                        className="w-full outline-none bg-transparent text-gray-700 placeholder-gray-500 text-lg"
-                        placeholder="What are you looking ?"
-                     />
-                  </div>
-               </form>
-            </div>
+            <div className="flex items-center w-[350px]"></div>
 
             {/* Center logo */}
             <div className="flex-1 flex justify-center">
@@ -98,7 +67,7 @@ export default function Navbar() {
                {token ? (
                   <button
                      onClick={handleLogout}
-                     className="text-gray-700 hover:text-gray-900"
+                     className="text-gray-700 hover:text-gray-900 cursor-pointer"
                   >
                      Logout
                   </button>
