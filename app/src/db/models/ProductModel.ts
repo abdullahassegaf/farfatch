@@ -31,11 +31,7 @@ export default class ProductModel {
    }
    static async search(query: string) {
       const collection = this.getCollection();
-
-      // Create a regex pattern for case-insensitive search
       const pattern = new RegExp(query, "i");
-
-      // Search in multiple fields
       const products = await collection
          .find({
             $or: [

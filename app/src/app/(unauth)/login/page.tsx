@@ -38,8 +38,8 @@ export default function Login() {
          body: JSON.stringify(input),
       });
       const data = await resp.json();
+
       if (!resp.ok) {
-         // Handle error
          Swal.fire({
             title: "The Internet?",
             text: "That thing is still around?",

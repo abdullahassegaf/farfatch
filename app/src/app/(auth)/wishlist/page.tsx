@@ -30,7 +30,7 @@ export default function WishlistPage() {
          });
          return;
       }
-      console.log(data, "<<<< wishlist data");
+      // console.log(data, "<<<< wishlist data");
 
       setWishlist(data);
    };
