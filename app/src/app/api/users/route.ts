@@ -1,7 +1,5 @@
-import CustomError from "@/db/helpers/CustomError";
 import errorHandler from "@/db/helpers/errorHandler";
 import USerModel, { IUser } from "@/db/models/UserModel";
-import { ZodError } from "zod";
 
 export async function POST(req: Request) {
    try {

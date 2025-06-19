@@ -49,7 +49,7 @@ export default function Navbar() {
                   </svg>
                </Link>
 
-               <Link href="/wishlist">
+               <Link href="/wishlist" className="inline-flex items-center">
                   <svg
                      width="24"
                      height="24"

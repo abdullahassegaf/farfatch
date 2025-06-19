@@ -12,7 +12,10 @@ export interface IWishlistPost {
    productId: string;
    userId: string;
 }
-
+export interface IWishlistDelete {
+   productId: string;
+   userId: string;
+}
 export default class WishlistModel {
    static getCollection() {
       return getDb().collection<IWishlistGet>("wishlist");
