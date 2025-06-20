@@ -46,7 +46,7 @@ const BannerCarousel = () => {
                Gambar tidak ditemukan
             </div>
          )}
-         {/* Navigation buttons */}
+
          <button
             onClick={goToPrevBanner}
             className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow z-30"
