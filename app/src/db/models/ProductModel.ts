@@ -47,4 +47,53 @@ export default class ProductModel {
 
       return products;
    }
+   static async getPaginatedProducts(page: number, limit: number) {
+      const collection = this.getCollection();
+      const skip = (page - 1) * limit;
+      const products = await collection
+         .find()
+         .skip(skip)
+         .limit(limit)
+         .toArray();
+
+      const totalCount = await collection.countDocuments();
+      const totalPages = Math.ceil(totalCount / limit);
+
+      return {
+         products,
+         totalCount,
+         totalPages,
+         currentPage: page,
+      };
+   }
+   static async searchPaginated(query: string, page: number, limit: number) {
+      const collection = this.getCollection();
+      const pattern = new RegExp(query, "i");
+      const skip = (page - 1) * limit;
+
+      const searchQuery = {
+         $or: [
+            { name: { $regex: pattern } },
+            { description: { $regex: pattern } },
+            { excerpt: { $regex: pattern } },
+            { tags: { $elemMatch: { $regex: pattern } } },
+         ],
+      };
+
+      const products = await collection
+         .find(searchQuery)
+         .skip(skip)
+         .limit(limit)
+         .toArray();
+
+      const totalCount = await collection.countDocuments(searchQuery);
+      const totalPages = Math.ceil(totalCount / limit);
+
+      return {
+         products,
+         totalCount,
+         totalPages,
+         currentPage: page,
+      };
+   }
 }

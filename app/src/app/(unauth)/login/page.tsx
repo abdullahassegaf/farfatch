@@ -5,7 +5,7 @@ import React, { useContext, useState } from "react";
 import Swal from "sweetalert2";
 import { setCookie } from "./action";
 import AuthContext from "@/context/AuthContext";
-import { get } from "http";
+
 import { getCookie } from "@/app/components/actions";
 
 export interface ILogin {

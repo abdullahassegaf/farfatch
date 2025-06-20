@@ -27,60 +27,89 @@ export default function ProductPage() {
    const searchParams = useSearchParams();
    const searchQuery = searchParams.get("q") || "";
    const [products, setProducts] = useState<IProducts[]>([]);
+   const [page, setPage] = useState(1);
+   const [hasMore, setHasMore] = useState(true);
+   const [loading, setLoading] = useState(false);
+   const fetchData = async (
+      pageNum: number = 1,
+      isNewSearch: boolean = false
+   ) => {
+      if (loading) return;
 
-   // Use the search parameter in the API call
-
-   const fetchData = async () => {
+      setLoading(true);
       try {
-         const apiUrl = searchQuery
-            ? `http://localhost:3000/api/products?q=${encodeURIComponent(
-                 searchQuery
-              )}`
-            : "http://localhost:3000/api/products";
+         const apiUrl = `/api/products?page=${pageNum}&limit=8${
+            searchQuery ? `&q=${encodeURIComponent(searchQuery)}` : ""
+         }`;
+
          const response = await fetch(apiUrl);
          if (!response.ok) {
             throw new Error("Failed to fetch products");
          }
-         const data: IProducts[] = await response.json();
-         setProducts((prev) => [...prev, ...data]);
+         const data = await response.json();
+
+         if (isNewSearch) {
+            setProducts(data.products);
+            setPage(1);
+         } else {
+            setProducts((prev) => [...prev, ...data.products]);
+         }
+
+         setHasMore(data.hasMore);
       } catch (error) {
          console.error("Error fetching products:", error);
+      } finally {
+         setLoading(false);
       }
    };
+
+   const fetchMoreData = () => {
+      if (hasMore && !loading) {
+         const nextPage = page + 1;
+         setPage(nextPage);
+         fetchData(nextPage, false);
+      }
+   };
+
    useEffect(() => {
-      fetchData();
+      setProducts([]);
+      setPage(1);
+      setHasMore(true);
+      fetchData(1, true);
    }, [searchQuery]);
 
    return (
       <div className="min-h-screen bg-gray-100 p-8">
          <h1 className="text-4xl font-bold mb-8 text-center">All Products</h1>
-
          {/* Search Component */}
-         <ProductSearch />
-
+         <ProductSearch />{" "}
          <InfiniteScroll
-            dataLength={products.length} //This is important field to render the next data
-            next={fetchData}
-            hasMore={true}
-            loader={<h4>Loading...</h4>}
+            dataLength={products.length}
+            next={fetchMoreData}
+            hasMore={hasMore}
+            loader={
+               <div className="text-center py-4">
+                  <h4>Loading more products...</h4>
+               </div>
+            }
             endMessage={
-               <p style={{ textAlign: "center" }}>
-                  <b>Yay! You have seen it all</b>
+               <p className="text-center py-4">
+                  <b>You have seen all products!</b>
                </p>
             }
-            // below props only if you need pull down functionality
-            refreshFunction={fetchData}
+            refreshFunction={() => {
+               setProducts([]);
+               setPage(1);
+               setHasMore(true);
+               fetchData(1, true);
+            }}
             pullDownToRefresh
             pullDownToRefreshThreshold={50}
             pullDownToRefreshContent={
-               <h3 style={{ textAlign: "center" }}>
-                  &#8595; Pull down to refresh
-               </h3>
+               <h3 className="text-center">&#8595; Pull down to refresh</h3>
             }
             releaseToRefreshContent={
-               <h3 style={{ textAlign: "center" }}>
-                  &#8593; Release to refresh
-               </h3>
+               <h3 className="text-center">&#8593; Release to refresh</h3>
             }
          >
             <div className="flex items-center justify-center bg-gray-200 py-8">

@@ -16,10 +16,19 @@ export interface IProducts {
    createdAt: Date;
    updatedAt: Date;
 }
-
+interface IProductsResponse {
+   products: IProducts[];
+   hasMore: boolean;
+   totalCount: number;
+   currentPage: number;
+   totalPages: number;
+}
 export default async function Home() {
    const resp = await fetch("http://localhost:3000/api/products");
-   const products: IProducts[] = await resp.json();
+   const products: IProductsResponse = await resp.json();
+   // console.log("Fetched products:", products);
+   const response = products.products.slice(0, 8);
+
    return (
       <div className="min-h-screen bg-gray-100 p-8">
          <div className="flex flex-col items-center mb-8">
@@ -36,7 +45,7 @@ export default async function Home() {
 
          <div className="flex items-center justify-center min-h-screen bg-gray-200">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-               {products.slice(0, 8).map((product) => (
+               {response.map((product) => (
                   <Link
                      href={`/product/${product.slug}`}
                      key={product._id.toString()}
