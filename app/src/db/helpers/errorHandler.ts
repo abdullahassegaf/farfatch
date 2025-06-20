@@ -17,6 +17,13 @@ export default function errorHandler(err: unknown): {
    } else if (err instanceof JWSInvalid) {
       result.message = "Invalid Token";
       result.status = 403;
+   } else if (err instanceof Error) {
+      result.message = err.message;
+      if (err.message === "Item already exists in wishlist") {
+         result.status = 409; // Conflict status code
+      } else {
+         result.status = 500;
+      }
    }
    return result;
 }

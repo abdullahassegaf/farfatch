@@ -1,5 +1,6 @@
 "use client";
 import AuthContext from "@/context/AuthContext";
+import { WishlistProvider } from "@/context/WishlistContext";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { deleteCookie, getCookie } from "./actions";
@@ -25,7 +26,7 @@ export default function Provider({ children }: { children: React.ReactNode }) {
    };
    return (
       <AuthContext.Provider value={{ token, setToken }}>
-         {children}
+         <WishlistProvider>{children}</WishlistProvider>
       </AuthContext.Provider>
    );
 }

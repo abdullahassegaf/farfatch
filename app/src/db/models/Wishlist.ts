@@ -23,7 +23,18 @@ export default class WishlistModel {
    static async findAll(userId: string) {
       const collection = this.getCollection();
       const wishlist = await collection
-         .find({ userId: new ObjectId(userId) })
+         .aggregate([
+            { $match: { userId: new ObjectId(userId) } },
+            {
+               $lookup: {
+                  from: "products",
+                  localField: "productId",
+                  foreignField: "_id",
+                  as: "product",
+               },
+            },
+            { $unwind: "$product" },
+         ])
          .toArray();
       return wishlist;
    }
@@ -36,11 +47,30 @@ export default class WishlistModel {
       if (existingItem) {
          throw new Error("Item already exists in wishlist");
       }
-      await collection.insertOne({
+      const result = await collection.insertOne({
          productId: new ObjectId(data.productId),
          userId: new ObjectId(data.userId),
          createdAt: new Date(),
          updatedAt: new Date(),
       });
+      return result;
+   }
+
+   static async isInWishlist(data: IWishlistPost): Promise<boolean> {
+      const collection = this.getCollection();
+      const existingItem = await collection.findOne({
+         productId: new ObjectId(data.productId),
+         userId: new ObjectId(data.userId),
+      });
+      return !!existingItem;
+   }
+
+   static async removeFromWishlist(data: IWishlistDelete) {
+      const collection = this.getCollection();
+      const result = await collection.deleteOne({
+         productId: new ObjectId(data.productId),
+         userId: new ObjectId(data.userId),
+      });
+      return result;
    }
 }

@@ -1,7 +1,9 @@
 import { getDb } from "../config/mongodb";
+import { ObjectId } from "mongodb";
 
 export interface IProducts {
-   id: number;
+   _id?: ObjectId;
+   id?: number;
    name: string;
    slug: string;
    description: string;

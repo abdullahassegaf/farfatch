@@ -1,6 +1,6 @@
 "use server";
-import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
+import { revalidatePath } from "next/cache";
 
 export async function getCookie(name: string) {
    const cookieStore = await cookies();
@@ -14,4 +14,13 @@ export async function deleteCookie(name: string) {
    console.log("Cookie deleted");
    // redirect("/login"); // Redirect to login page after deleting cookie
    // return cookie;
+}
+
+export async function deleteWishlist(id: string) {
+   const resp = await fetch(`https://localhost:3000/wishlist/${id}`, {
+      method: "DELETE",
+   });
+   const data = await resp.json();
+
+   revalidatePath("/wishlist");
 }

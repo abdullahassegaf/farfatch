@@ -16,10 +16,13 @@ export async function middleware(req: NextRequest) {
                   { status: 401 }
                );
             const secret = new TextEncoder().encode(process.env.JWT_SECRET);
+            console.log("<<<<<<< payload in middleware");
             const { payload } = await jose.jwtVerify<{
                _id: string;
                username: string;
             }>(token.value, secret);
+            console.log("payload", payload);
+
             const requestHeaders = new Headers(req.headers);
             const response = NextResponse.next({
                request: {
@@ -33,6 +36,8 @@ export async function middleware(req: NextRequest) {
          }
       }
    } catch (error) {
+      // console.log(error, "<<<<<<< error in middleware");
+
       const { message, status } = errorHandler(error);
       return Response.json({ message }, { status });
    }
