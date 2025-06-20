@@ -64,7 +64,7 @@ export default function WishlistPage() {
          return;
       }
       fetchWishlist();
-   }, [token, wishlistVersion]); // Add wishlistVersion as dependency
+   }, [token, wishlistVersion]);
 
    return (
       <div className="min-h-screen bg-gray-100 p-8">

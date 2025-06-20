@@ -26,7 +26,6 @@ interface IProductsResponse {
 export default async function Home() {
    const resp = await fetch("http://localhost:3000/api/products");
    const products: IProductsResponse = await resp.json();
-   // console.log("Fetched products:", products);
    const response = products.products.slice(0, 8);
 
    return (
