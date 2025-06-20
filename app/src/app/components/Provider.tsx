@@ -1,12 +1,12 @@
 "use client";
 import AuthContext from "@/context/AuthContext";
 import { WishlistProvider } from "@/context/WishlistContext";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { deleteCookie, getCookie } from "./actions";
+import { getCookie } from "./actions";
 
 export default function Provider({ children }: { children: React.ReactNode }) {
-   const router = useRouter();
+   // const router = useRouter();
 
    const [token, setToken] = useState<string | null>(null);
 
@@ -19,11 +19,11 @@ export default function Provider({ children }: { children: React.ReactNode }) {
       setToken(cookie?.value || null);
    };
 
-   const handleLogout = async () => {
-      await deleteCookie("access_token");
-      setToken(null);
-      router.push("/login");
-   };
+   // const handleLogout = async () => {
+   //    await deleteCookie("access_token");
+   //    setToken(null);
+   //    router.push("/login");
+   // };
    return (
       <AuthContext.Provider value={{ token, setToken }}>
          <WishlistProvider>{children}</WishlistProvider>

@@ -1,9 +1,16 @@
 "use client";
-import { useContext, useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
-import AuthContext from "@/context/AuthContext";
+import { useAuth } from "@/context/AuthContext";
 import { useWishlist } from "@/context/WishlistContext";
 import Swal from "sweetalert2";
+import { ObjectId } from "mongodb";
+
+interface WishlistItem {
+   _id: ObjectId;
+   productId: ObjectId;
+   userId: ObjectId;
+}
 
 interface AddToWishlistButtonProps {
    productId: string;
@@ -12,19 +19,12 @@ interface AddToWishlistButtonProps {
 export default function AddToWishlistButton({
    productId,
 }: AddToWishlistButtonProps) {
-   const { token } = useContext(AuthContext);
+   const { token } = useAuth();
    const { refreshWishlist } = useWishlist();
    const router = useRouter();
    const [loading, setLoading] = useState(false);
    const [isAdded, setIsAdded] = useState(false);
-
-   // Check if item is already in wishlist when component mounts
-   useEffect(() => {
-      if (token) {
-         checkIfInWishlist();
-      }
-   }, [token, productId]);
-   const checkIfInWishlist = async () => {
+   const checkIfInWishlist = useCallback(async () => {
       try {
          const response = await fetch("/api/wishlist", {
             headers: {
@@ -32,23 +32,30 @@ export default function AddToWishlistButton({
             },
          });
          if (response.ok) {
-            const wishlist = await response.json();
+            const wishlist: WishlistItem[] = await response.json();
             const isInWishlist = wishlist.some(
-               (item: any) => item.productId.toString() === productId.toString()
+               (item: WishlistItem) =>
+                  item.productId.toString() === productId.toString()
             );
             setIsAdded(isInWishlist);
          }
       } catch (error) {
          // Silently fail - not critical, but log for debugging
          console.error("Failed to check wishlist status:", error);
-         setIsAdded(false);
-
-         // Only show error if it's a network issue or server error
+         setIsAdded(false); // Only show error if it's a network issue or server error
          if (error instanceof Error && error.message.includes("fetch")) {
             console.warn("Network error while checking wishlist status");
          }
       }
-   };
+   }, [token, productId]);
+
+   // Check if item is already in wishlist when component mounts
+   useEffect(() => {
+      if (token) {
+         checkIfInWishlist();
+      }
+   }, [token, productId, checkIfInWishlist]);
+
    const handleToggleWishlist = async () => {
       if (!token) {
          Swal.fire({
@@ -70,7 +77,6 @@ export default function AddToWishlistButton({
       // If not in wishlist, add it
       await handleAdd();
    };
-
    const handleAdd = async () => {
       setLoading(true);
       try {
@@ -78,7 +84,7 @@ export default function AddToWishlistButton({
             method: "POST",
             headers: {
                "Content-Type": "application/json",
-               "x-user-id": token,
+               ...(token && { "x-user-id": token }),
             },
             body: JSON.stringify({ productId }),
          });
@@ -114,13 +120,16 @@ export default function AddToWishlistButton({
             showConfirmButton: false,
             timerProgressBar: true,
          });
-
          setIsAdded(true);
          refreshWishlist(); // Trigger wishlist refresh
-      } catch (err: any) {
+      } catch (error: unknown) {
+         const errorMessage =
+            error instanceof Error
+               ? error.message
+               : "Failed to add to wishlist";
          Swal.fire({
             title: "Error",
-            text: err.message || "Failed to add to wishlist",
+            text: errorMessage,
             icon: "error",
             confirmButtonText: "OK",
          });
@@ -128,7 +137,6 @@ export default function AddToWishlistButton({
          setLoading(false);
       }
    };
-
    const handleRemove = async () => {
       setLoading(true);
       try {
@@ -136,7 +144,7 @@ export default function AddToWishlistButton({
             method: "DELETE",
             headers: {
                "Content-Type": "application/json",
-               "x-user-id": token,
+               ...(token && { "x-user-id": token }),
             },
             body: JSON.stringify({ productId }),
          });
@@ -153,13 +161,16 @@ export default function AddToWishlistButton({
             showConfirmButton: false,
             timerProgressBar: true,
          });
-
          setIsAdded(false);
          refreshWishlist(); // Trigger wishlist refresh
-      } catch (err: any) {
+      } catch (err: unknown) {
+         const errorMessage =
+            err instanceof Error
+               ? err.message
+               : "Failed to remove from wishlist";
          Swal.fire({
             title: "Error",
-            text: err.message || "Failed to remove from wishlist",
+            text: errorMessage,
             icon: "error",
             confirmButtonText: "OK",
          });
@@ -169,7 +180,6 @@ export default function AddToWishlistButton({
    };
    return (
       <div>
-         {" "}
          <button
             onClick={handleToggleWishlist}
             disabled={loading}

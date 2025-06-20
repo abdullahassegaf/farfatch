@@ -10,8 +10,8 @@ export async function getCookie(name: string) {
 
 export async function deleteCookie(name: string) {
    const cookieStore = await cookies();
-   const cookie = cookieStore.delete(name);
-   console.log("Cookie deleted");
+   cookieStore.delete(name);
+
    // redirect("/login"); // Redirect to login page after deleting cookie
    // return cookie;
 }
@@ -20,7 +20,7 @@ export async function deleteWishlist(id: string) {
    const resp = await fetch(`https://localhost:3000/wishlist/${id}`, {
       method: "DELETE",
    });
-   const data = await resp.json();
+   await resp.json();
 
    revalidatePath("/wishlist");
 }

@@ -3,11 +3,11 @@
 import { formatRupiah } from "@/db/helpers/formatRupiah";
 import { ObjectId } from "mongodb";
 import Link from "next/link";
-import { Metadata } from "next";
 import ProductSearch from "@/app/components/ProductSearch";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import Image from "next/image";
 
 export interface IProducts {
    _id: ObjectId;
@@ -82,7 +82,7 @@ export default function ProductPage() {
       <div className="min-h-screen bg-gray-100 p-8">
          <h1 className="text-4xl font-bold mb-8 text-center">All Products</h1>
          {/* Search Component */}
-         <ProductSearch />{" "}
+         <ProductSearch />
          <InfiniteScroll
             dataLength={products.length}
             next={fetchMoreData}
@@ -142,7 +142,9 @@ export default function ProductPage() {
                                     <path d="M12.1 8.64l-.1.1-.11-.11C10.14 6.6 7.1 7.24 5.6 9.28c-1.5 2.04-.44 5.12 2.54 7.05l.01.01.01.01 3.36 2.35c.38.27.9.27 1.28 0l3.36-2.35.01-.01.01-.01c2.98-1.93 4.04-5.01 2.54-7.05-1.5-2.04-4.54-2.68-6.5-.64z" />
                                  </svg>
                               </button>
-                              <img
+                              <Image
+                                 height={200}
+                                 width={300}
                                  src={
                                     product.thumbnail ||
                                     "https://placehold.co/300x200/png"

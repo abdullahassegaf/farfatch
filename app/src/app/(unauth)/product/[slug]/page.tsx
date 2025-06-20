@@ -1,7 +1,6 @@
-import ProductModel, { IProducts } from "@/db/models/ProductModel";
+import { IProducts } from "@/db/models/ProductModel";
 import { Metadata } from "next";
 import { formatRupiah } from "@/db/helpers/formatRupiah";
-import Image from "next/image";
 import AddToWishlistButton from "@/app/components/AddToWishlistButton";
 import ProductImageGallery from "./ProductImageGallery";
 

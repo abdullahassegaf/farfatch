@@ -1,6 +1,6 @@
 "use client";
-import { useContext, useState } from "react";
-import AuthContext from "@/context/AuthContext";
+import { useState } from "react";
+import { useAuth } from "@/context/AuthContext";
 import { useWishlist } from "@/context/WishlistContext";
 import Swal from "sweetalert2";
 
@@ -17,7 +17,7 @@ export default function RemoveFromWishlistIconButton({
    onRemove,
    size = "md",
 }: RemoveFromWishlistIconButtonProps) {
-   const { token } = useContext(AuthContext);
+   const { token } = useAuth();
    const { refreshWishlist } = useWishlist();
    const [loading, setLoading] = useState(false);
 
@@ -54,14 +54,13 @@ export default function RemoveFromWishlistIconButton({
       if (!result.isConfirmed) {
          return;
       }
-
       setLoading(true);
       try {
          const res = await fetch("/api/wishlist", {
             method: "DELETE",
             headers: {
                "Content-Type": "application/json",
-               "x-user-id": token,
+               ...(token && { "x-user-id": token }),
             },
             body: JSON.stringify({ productId }),
          });
@@ -86,10 +85,14 @@ export default function RemoveFromWishlistIconButton({
          if (onRemove) {
             onRemove();
          }
-      } catch (err: any) {
+      } catch (error: unknown) {
+         const errorMessage =
+            error instanceof Error
+               ? error.message
+               : "Failed to remove from wishlist";
          Swal.fire({
             title: "❌ Error",
-            text: err.message || "Failed to remove from wishlist",
+            text: errorMessage,
             icon: "error",
             confirmButtonText: "OK",
             confirmButtonColor: "#d33",

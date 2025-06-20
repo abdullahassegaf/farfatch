@@ -2,12 +2,11 @@
 import Link from "next/link";
 import { deleteCookie } from "./actions";
 import { useRouter } from "next/navigation";
-import { useContext } from "react";
-import AuthContext from "@/context/AuthContext";
+import { useAuth } from "@/context/AuthContext";
 
 export default function Navbar() {
    const router = useRouter();
-   const { token, setToken } = useContext(AuthContext);
+   const { token, setToken } = useAuth();
 
    const handleLogout = async () => {
       await deleteCookie("access_token");

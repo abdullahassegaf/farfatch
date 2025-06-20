@@ -1,14 +1,15 @@
 "use client";
 
 import { ObjectId } from "mongodb";
-import { useContext, useEffect, useState } from "react";
-import AuthContext from "@/context/AuthContext";
+import { useEffect, useState, useCallback } from "react";
+import { useAuth } from "@/context/AuthContext";
 import { useWishlist } from "@/context/WishlistContext";
 import { useRouter } from "next/navigation";
 import Swal from "sweetalert2";
 import Link from "next/link";
 import RemoveFromWishlistIconButton from "@/app/components/RemoveFromWishlistIconButton";
 import { formatRupiah } from "@/db/helpers/formatRupiah";
+import Image from "next/image";
 
 export interface IWishlist {
    _id: ObjectId;
@@ -26,13 +27,22 @@ export interface IWishlist {
       images: string[];
    };
 }
+export interface ErrorResponse {
+   success: false;
+   error: {
+      code: string;
+      message: string;
+      details?: string;
+   };
+   timestamp?: string;
+}
 
 export default function WishlistPage() {
    const [wishlist, setWishlist] = useState<IWishlist[]>([]);
-   const { token } = useContext(AuthContext);
+   const { token } = useAuth();
    const { wishlistVersion } = useWishlist();
    const router = useRouter();
-   const fetchWishlist = async () => {
+   const fetchWishlist = useCallback(async () => {
       try {
          const response = await fetch("/api/wishlist", {
             headers: {
@@ -52,11 +62,14 @@ export default function WishlistPage() {
       } catch (error) {
          Swal.fire({
             title: "Error",
-            text: "Failed to fetch wishlist",
+            text:
+               error instanceof Error
+                  ? error.message
+                  : "Failed to fetch wishlist",
             icon: "error",
          });
       }
-   };
+   }, [token]);
 
    useEffect(() => {
       if (!token) {
@@ -64,7 +77,7 @@ export default function WishlistPage() {
          return;
       }
       fetchWishlist();
-   }, [token, wishlistVersion]);
+   }, [token, wishlistVersion, fetchWishlist, router]);
 
    return (
       <div className="min-h-screen bg-gray-100 p-8">
@@ -75,15 +88,15 @@ export default function WishlistPage() {
             </div>
          ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-               {wishlist.map((item: any) => (
+               {wishlist.map((item: IWishlist) => (
                   <div
-                     key={item._id}
+                     key={item._id.toString()}
                      className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center relative hover:shadow-lg transition-shadow"
                   >
                      {/* Remove Button - positioned at top right */}
                      <div className="absolute top-3 right-3">
                         <RemoveFromWishlistIconButton
-                           productId={item.productId}
+                           productId={item.productId.toString()}
                            productName={item.product?.name}
                            size="md"
                            onRemove={() => fetchWishlist()}
@@ -95,10 +108,12 @@ export default function WishlistPage() {
                         href={`/product/${item.product?.slug}`}
                         className="flex flex-col items-center w-full"
                      >
-                        <img
+                        <Image
                            src={item.product?.thumbnail || "/no-image.png"}
-                           alt={item.product?.name}
+                           alt={item.product?.name || "Product image"}
                            className="w-32 h-32 object-cover mb-4 rounded"
+                           width={128}
+                           height={128}
                         />
                         <h2 className="text-xl font-semibold mb-2 text-center">
                            {item.product?.name}

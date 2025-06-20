@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const BannerCarousel = () => {
@@ -13,7 +14,7 @@ const BannerCarousel = () => {
          setImgError(false);
       }, 5000);
       return () => clearInterval(interval);
-   }, []);
+   }, [banners.length]);
 
    const goToNextBanner = () => {
       setCurrentBanner((prev) => (prev + 1) % banners.length);
@@ -28,7 +29,9 @@ const BannerCarousel = () => {
       <div className="relative w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[450px] xl:h-[500px] rounded-xl overflow-hidden shadow-lg bg-gray-200">
          {/* Banner images */}
          {banners.map((banner, index) => (
-            <img
+            <Image
+               height={250}
+               width={300}
                key={index}
                src={banner}
                alt={`Banner ${index + 1}`}
