@@ -1,9 +1,10 @@
+import Link from "next/link";
 import { redirect } from "next/navigation";
 
 export default async function RegisterPage({
    searchParams,
 }: {
-   searchParams: { [key: string]: string | string[] | undefined };
+   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
    const { error } = await searchParams;
    const handleRegister = async (param: FormData) => {
@@ -16,20 +17,23 @@ export default async function RegisterPage({
       if (!name) {
          return redirect("/register?error=Name is required");
       }
-      const resp = await fetch("http://localhost:3000/api/users", {
-         method: "POST",
-         headers: {
-            "Content-Type": "application/json",
-         },
-         body: JSON.stringify({
-            name,
-            email,
-            username,
-            password,
-         }),
-      });
+      const resp = await fetch(
+         `${process.env.NEXT_PUBLIC_BASE_URL}/api/users` ||
+            "http://localhost:3000/api/users",
+         {
+            method: "POST",
+            headers: {
+               "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+               name,
+               email,
+               username,
+               password,
+            }),
+         }
+      );
       const data = await resp.json();
-      console.log(data);
 
       if (!resp.ok) {
          redirect(`/register?error=${data.message}`);
@@ -91,10 +95,10 @@ export default async function RegisterPage({
                Register
             </button>
             <p className="text-center text-sm mt-2">
-               Already have an account?{" "}
-               <a href="/login" className="text-blue-600 hover:underline">
+               Already have an account?
+               <Link href="/login" className="text-blue-600 hover:underline">
                   Login
-               </a>
+               </Link>
             </p>
          </form>
       </div>

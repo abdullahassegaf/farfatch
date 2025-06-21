@@ -10,7 +10,10 @@ interface IProps {
 
 export async function generateMetadata({ params }: IProps): Promise<Metadata> {
    const { slug } = await params;
-   const resp = await fetch(`http://localhost:3000/api/products/${slug}`);
+   const resp = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/api/products/${slug}` ||
+         `http://localhost:3000/api/products/${slug}`
+   );
    const product: IProducts = await resp.json();
 
    return {

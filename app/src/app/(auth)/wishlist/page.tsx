@@ -44,11 +44,15 @@ export default function WishlistPage() {
    const router = useRouter();
    const fetchWishlist = useCallback(async () => {
       try {
-         const response = await fetch("/api/wishlist", {
-            headers: {
-               ...(token ? { "x-user-id": token } : {}),
-            },
-         });
+         const response = await fetch(
+            `${process.env.NEXT_PUBLIC_BASE_URL}/api/wishlist` ||
+               "http://localhost:3000/api/wishlist",
+            {
+               headers: {
+                  ...(token ? { "x-user-id": token } : {}),
+               },
+            }
+         );
          const data = await response.json();
          if (!response.ok) {
             Swal.fire({

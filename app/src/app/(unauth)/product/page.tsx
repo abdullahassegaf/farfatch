@@ -5,7 +5,7 @@ import { ObjectId } from "mongodb";
 import Link from "next/link";
 import ProductSearch from "@/app/components/ProductSearch";
 import InfiniteScroll from "react-infinite-scroll-component";
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 
@@ -23,7 +23,7 @@ export interface IProducts {
    updatedAt: Date;
 }
 
-export default function ProductPage() {
+function ProductPageContent() {
    const searchParams = useSearchParams();
    const searchQuery = searchParams.get("q") || "";
    const [products, setProducts] = useState<IProducts[]>([]);
@@ -171,5 +171,15 @@ export default function ProductPage() {
             </div>
          </InfiniteScroll>
       </div>
+   );
+}
+
+export default function ProductPage() {
+   return (
+      <Suspense
+         fallback={<div className="flex justify-center p-8">Loading...</div>}
+      >
+         <ProductPageContent />
+      </Suspense>
    );
 }

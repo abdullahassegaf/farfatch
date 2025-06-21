@@ -3,7 +3,6 @@ import { ObjectId } from "mongodb";
 import Link from "next/link";
 import BannerCarousel from "./components/BannerCarousel";
 import Image from "next/image";
-// import Image from "next/image";
 
 export interface IProducts {
    _id: ObjectId;
@@ -26,7 +25,15 @@ interface IProductsResponse {
    totalPages: number;
 }
 export default async function Home() {
-   const resp = await fetch("http://localhost:3000/api/products");
+   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+   const resp = await fetch(`${baseUrl}/api/products`, {
+      cache: "no-store", // Ensure fresh data
+   });
+
+   if (!resp.ok) {
+      return new Error(`Failed to fetch products: ${resp.status}`);
+   }
+
    const products: IProductsResponse = await resp.json();
    const response = products.products.slice(0, 8);
 
