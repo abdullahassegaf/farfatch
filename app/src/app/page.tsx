@@ -56,7 +56,7 @@ const products: IProductsResponse = await resp.json();
                </span>
             </h2>
             <div className="w-full max-w-5xl rounded-xl overflow-hidden shadow-lg bg-white">
-               {/* <BannerCarousel /> */}
+                {/* <BannerCarousel />  */} testt
             </div> 
          </div>
 
