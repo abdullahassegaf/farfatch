@@ -31,8 +31,17 @@ export default async function Home() {
    });
 
    if (!resp.ok) {
-      return new Error(`Failed to fetch products: ${resp.status}`);
-   }
+   // Mengembalikan JSX berupa teks biasa, bukan objek Error
+   return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
+         <p className="text-red-500 font-semibold">
+            Gagal memuat produk: {resp.status}
+         </p>
+      </div>
+   );
+}
+
+const products: IProductsResponse = await resp.json();
 
    const products: IProductsResponse = await resp.json();
    const response = products.products.slice(0, 8);
