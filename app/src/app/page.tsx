@@ -1,7 +1,7 @@
 import { formatRupiah } from "@/db/helpers/formatRupiah";
 import { ObjectId } from "mongodb";
 import Link from "next/link";
-// import BannerCarousel from "./components/BannerCarousel";
+import BannerCarousel from "./components/BannerCarousel";
 import Image from "next/image";
 
 export interface IProducts {
@@ -56,7 +56,7 @@ const products: IProductsResponse = await resp.json();
                </span>
             </h2>
             <div className="w-full max-w-5xl rounded-xl overflow-hidden shadow-lg bg-white">
-                {/* <BannerCarousel />  */} testt
+                <BannerCarousel />
             </div> 
          </div>
 
